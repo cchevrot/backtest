@@ -1,0 +1,53 @@
+sequenceDiagram
+    participant O as Optimizer
+    participant SR as SimulationRunner
+    participant M as SimulationMemoire
+    participant Pool as Multiprocessing Pool
+    participant PL as PriceLogger
+    participant T as SortedPnlTable
+    participant A as AlgoEchappee
+    participant P as Portfolio
+    
+    O->>SR: run_simulation_display(params, iteration)
+    SR->>M: has_been_tested(params)?
+    
+    alt Configuration en cache
+        M-->>SR: Oui
+        SR->>M: get_pnl(params)
+        M-->>SR: metrics
+        SR-->>O: total_pnl (depuis cache)
+    else Configuration non testée
+        M-->>SR: Non
+        SR->>SR: Afficher paramètres
+        SR->>SR: run_simulation(params)
+        SR->>Pool: Créer pool de processus
+        
+        loop Pour chaque fichier data
+            Pool->>SR: run_single_file_simulation(file, params)
+            SR->>PL: Charger fichier LZ4
+            PL-->>SR: Données décompressées
+            SR->>T: Créer SortedPnlTable()
+            SR->>A: Créer AlgoEchappee(params)
+            A->>P: Créer Portfolio
+            
+            loop Pour chaque tick
+                SR->>T: update_ticker(ticker, price, timestamp)
+                SR->>P: refresh_prices(table)
+                SR->>T: has_been_resorted()?
+                alt Table triée
+                    T-->>SR: True
+                    SR->>A: main(table, timestamp)
+                    A->>P: Gérer trades
+                end
+            end
+            
+            SR->>P: close_all(table, timestamp)
+            P-->>SR: total_pnl, trades
+            SR-->>Pool: {file_pnl, invested_capital, roi}
+        end
+        
+        Pool-->>SR: Liste de résultats
+        SR->>SR: Agréger métriques
+        SR->>M: add_result(params, metrics)
+        SR-->>O: total_pnl
+    end

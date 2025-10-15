@@ -1,0 +1,64 @@
+flowchart TB
+    subgraph Entrées
+        Input1[("Fichier LZ4 multi-jours<br/>prices_data.lz4")]
+        Input2["Paramètres:<br/>- Chemin fichier entrée<br/>- Répertoire sortie"]
+    end
+    
+    subgraph "Étape 1: Lecture"
+        CheckFile{Fichier existe?}
+        OpenLZ4[Ouvrir fichier LZ4<br/>mode lecture]
+        LoadPickle[Charger buffer pickle]
+    end
+    
+    subgraph "Étape 2: Regroupement par date"
+        LoopData[Pour chaque tuple<br/>timestamp, ticker, price]
+        ExtractDate[Extraire date<br/>du timestamp]
+        ConvertDate["fmt_date:<br/>YYYY-MM-DD"]
+        GroupByDay[Regrouper dans<br/>dictionnaire par jour]
+    end
+    
+    subgraph "Étape 3: Sauvegarde"
+        CreateDir{Répertoire<br/>sortie existe?}
+        MakeDir[Créer répertoire]
+        LoopDays[Pour chaque jour]
+        CreateFile[Créer fichier<br/>prices_data_YYYY-MM-DD.lz4]
+        WritePickle[Écrire tuples<br/>en pickle]
+    end
+    
+    subgraph Sortie
+        Output1[("prices_data_2025-06-17.lz4")]
+        Output2[("prices_data_2025-06-18.lz4")]
+        OutputN[("prices_data_2025-06-XX.lz4")]
+    end
+    
+    subgraph "Données intermédiaires"
+        Data1["buffer:<br/>liste de tuples<br/>timestamp, ticker, price"]
+        Data2["data_by_day:<br/>dict<br/>YYYY-MM-DD: [tuples]"]
+    end
+    
+    Input1 --> CheckFile
+    Input2 --> CheckFile
+    CheckFile -->|Oui| OpenLZ4
+    CheckFile -->|Non| Error[Erreur: fichier inexistant]
+    
+    OpenLZ4 --> LoadPickle
+    LoadPickle --> Data1
+    
+    Data1 --> LoopData
+    LoopData --> ExtractDate
+    ExtractDate --> ConvertDate
+    ConvertDate --> GroupByDay
+    
+    GroupByDay --> Data2
+    
+    Data2 --> CreateDir
+    CreateDir -->|Non| MakeDir
+    CreateDir -->|Oui| LoopDays
+    MakeDir --> LoopDays
+    
+    LoopDays --> CreateFile
+    CreateFile --> WritePickle
+    
+    WritePickle --> Output1
+    WritePickle --> Output2
+    WritePickle --> OutputN

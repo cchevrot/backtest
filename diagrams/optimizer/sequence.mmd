@@ -1,0 +1,45 @@
+sequenceDiagram
+    participant Main
+    participant Optimizer
+    participant SimulationRunner
+    participant SimulationMemoire
+    
+    Main->>Optimizer: coordinate_descent_step(current_params, param_idx, iteration)
+    activate Optimizer
+    
+    Note over Optimizer: Get parameter to optimize
+    
+    Optimizer->>SimulationRunner: run_simulation_display(current_params, iteration)
+    activate SimulationRunner
+    SimulationRunner-->>Optimizer: baseline_pnl
+    deactivate SimulationRunner
+    
+    Note over Optimizer: Generate possible parameter values
+    
+    loop For each possible value
+        Note over Optimizer: Create test parameters with new value
+        
+        Optimizer->>SimulationRunner: memoire.has_been_tested(test_params)
+        activate SimulationRunner
+        SimulationRunner->>SimulationMemoire: has_been_tested(test_params)
+        activate SimulationMemoire
+        SimulationMemoire-->>SimulationRunner: boolean result
+        deactivate SimulationMemoire
+        SimulationRunner-->>Optimizer: boolean result
+        deactivate SimulationRunner
+        
+        alt Configuration not tested
+            Optimizer->>SimulationRunner: run_simulation_display(test_params, iteration)
+            activate SimulationRunner
+            Note over SimulationRunner: Run simulation with test parameters
+            SimulationRunner-->>Optimizer: pnl
+            deactivate SimulationRunner
+            
+            alt PnL >= best_pnl
+                Note over Optimizer: Update best parameters and best PnL
+            end
+        end
+    end
+    
+    Optimizer-->>Main: best_params, best_pnl, has_untested
+    deactivate Optimizer

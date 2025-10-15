@@ -1,0 +1,43 @@
+flowchart TD
+    Start([Optimizer appelle run_simulation_display]) --> CheckCache{Configuration<br/>en cache?}
+    
+    CheckCache -->|Oui| GetCache[Récupérer métriques<br/>depuis memoire]
+    GetCache --> ReturnCached[Retourner total_pnl]
+    
+    CheckCache -->|Non| Display[Afficher paramètres<br/>dans tableau]
+    Display --> RunSim[run_simulation]
+    
+    RunSim --> CreatePool[Créer Pool<br/>multiprocessing]
+    CreatePool --> PrepTasks[Préparer tasks<br/>pour chaque fichier]
+    PrepTasks --> Parallel[Exécuter en parallèle<br/>run_single_file_simulation]
+    
+    Parallel --> RunFile1[Fichier 1:<br/>Charger données LZ4]
+    Parallel --> RunFile2[Fichier 2:<br/>Charger données LZ4]
+    Parallel --> RunFileN[Fichier N:<br/>Charger données LZ4]
+    
+    RunFile1 --> Process1[Créer Table + Algo]
+    RunFile2 --> Process2[Créer Table + Algo]
+    RunFileN --> ProcessN[Créer Table + Algo]
+    
+    Process1 --> Loop1[Itérer sur ticks]
+    Process2 --> Loop2[Itérer sur ticks]
+    ProcessN --> LoopN[Itérer sur ticks]
+    
+    Loop1 --> Close1[Fermer positions]
+    Loop2 --> Close2[Fermer positions]
+    LoopN --> CloseN[Fermer positions]
+    
+    Close1 --> Metrics1[Calculer métriques<br/>journalières]
+    Close2 --> Metrics2[Calculer métriques<br/>journalières]
+    CloseN --> MetricsN[Calculer métriques<br/>journalières]
+    
+    Metrics1 --> Aggregate[Agréger résultats]
+    Metrics2 --> Aggregate
+    MetricsN --> Aggregate
+    
+    Aggregate --> CalcTotal[Calculer métriques totales:<br/>PnL, ROI, std, jours+/-]
+    CalcTotal --> SaveCache[Sauvegarder dans<br/>memoire cache]
+    SaveCache --> Return[Retourner total_pnl]
+    
+    ReturnCached --> End([Fin])
+    Return --> End

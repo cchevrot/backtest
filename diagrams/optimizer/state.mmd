@@ -1,0 +1,61 @@
+stateDiagram-v2
+    [*] --> InitialState: Start with current parameters
+    
+    InitialState --> ParameterSelection: Select parameter to optimize
+    ParameterSelection --> BaselineEvaluation: Get baseline PnL
+    
+    BaselineEvaluation --> ValueGeneration: Generate possible values
+    
+    state ValueGeneration {
+        [*] --> TimeBasedGeneration: If parameter is time-based
+        [*] --> NumericGeneration: If parameter is numeric
+        TimeBasedGeneration --> [*]: Values generated
+        NumericGeneration --> [*]: Values generated
+    }
+    
+    ValueGeneration --> TestingState: For each value
+    
+    state TestingState {
+        [*] --> AlreadyTested: Check if configuration tested
+        AlreadyTested --> SkipValue: If already tested
+        AlreadyTested --> RunSimulation: If not tested
+        RunSimulation --> ComparisonState: Get PnL
+        SkipValue --> [*]: Next value
+        ComparisonState --> UpdateBest: If PnL >= best_pnl
+        ComparisonState --> NoUpdate: If PnL < best_pnl
+        UpdateBest --> [*]: Next value
+        NoUpdate --> [*]: Next value
+    }
+    
+    TestingState --> AllValuesTested: All values processed
+    AllValuesTested --> FinalState: Return best parameters
+    
+    FinalState --> [*]: End optimization step
+    
+    note right of InitialState
+        Current parameters and PnL
+    end note
+    
+    note right of ParameterSelection
+        Select one parameter to optimize
+        while keeping others constant
+    end note
+    
+    note right of BaselineEvaluation
+        Run simulation with current parameters
+        to establish baseline PnL
+    end note
+    
+    note right of ValueGeneration
+        Generate all possible values
+        within min-max range using step
+    end note
+    
+    note right of TestingState
+        Test each value and compare results
+    end note
+    
+    note right of FinalState
+        Best parameters, best PnL,
+        and has_untested flag
+    end note

@@ -1,0 +1,59 @@
+flowchart TB
+    subgraph Entrées
+        Input1[("Fichier LZ4<br/>prices_data.lz4")]
+        Input2["Paramètres:<br/>- Ticker (ex: 'KWE')<br/>- Intervalle (ex: '5min')"]
+    end
+    
+    subgraph "Étape 1: Chargement"
+        Load[PriceLogger<br/>Décompression LZ4]
+        Filter[Filtrage par ticker<br/>+ extraction date]
+    end
+    
+    subgraph "Étape 2: Rééchantillonnage"
+        Resample[Regrouper par intervalles<br/>de 5 minutes]
+        Aggregate[Calculer moyenne<br/>des prix par intervalle]
+    end
+    
+    subgraph "Étape 3: Calculs"
+        CalcRSI[Calculer RSI<br/>période = 14]
+        RSISteps["1. Différences de prix<br/>2. Gains vs Pertes<br/>3. Moyennes lissées<br/>4. RS = gain_moy / perte_moy<br/>5. RSI = 100 - (100/(1+RS))"]
+    end
+    
+    subgraph "Étape 4: Visualisation"
+        CreateFig[Créer figure<br/>2 sous-graphiques]
+        PlotPrice[Graphique 1:<br/>Prix rééchantillonnés<br/>intervalles 5 min]
+        PlotRSI[Graphique 2:<br/>RSI avec seuils<br/>70 et 30]
+    end
+    
+    subgraph Sortie
+        Output[("Image PNG<br/>{ticker}_price_rsi_history.png")]
+    end
+    
+    subgraph "Données intermédiaires"
+        Data1["timestamps[]<br/>prices[]<br/>(données brutes)"]
+        Data2["resampled_times[]<br/>resampled_prices[]<br/>(intervalles 5 min)"]
+        Data3["rsi[]<br/>(valeurs RSI)"]
+    end
+    
+    Input1 --> Load
+    Input2 --> Filter
+    Load --> Filter
+    
+    Filter --> Data1
+    Data1 --> Resample
+    Resample --> Aggregate
+    
+    Aggregate --> Data2
+    Data2 --> CalcRSI
+    CalcRSI --> RSISteps
+    
+    RSISteps --> Data3
+    
+    Data2 --> CreateFig
+    Data3 --> CreateFig
+    
+    CreateFig --> PlotPrice
+    CreateFig --> PlotRSI
+    
+    PlotPrice --> Output
+    PlotRSI --> Output

@@ -1,0 +1,37 @@
+stateDiagram-v2
+    [*] --> Initialized: __init__(data_files, memoire)
+    
+    Initialized --> CheckingCache: run_simulation_display()
+    
+    CheckingCache --> CacheHit: Configuration trouvée
+    CheckingCache --> CacheMiss: Configuration nouvelle
+    
+    CacheHit --> ReturningCached: Récupérer métriques
+    ReturningCached --> [*]
+    
+    CacheMiss --> DisplayingParams: Afficher tableau params
+    DisplayingParams --> RunningSimulation: run_simulation()
+    
+    RunningSimulation --> CreatingPool: Initialiser Pool
+    CreatingPool --> ParallelExecution: Distribuer fichiers
+    
+    ParallelExecution --> ProcessingFile1: Worker 1
+    ParallelExecution --> ProcessingFile2: Worker 2
+    ParallelExecution --> ProcessingFileN: Worker N
+    
+    state ProcessingFile1 {
+        [*] --> LoadData: Charger LZ4
+        LoadData --> InitComponents: Créer Table + Algo
+        InitComponents --> IteratingTicks: Boucle sur ticks
+        IteratingTicks --> ClosingPositions: Fin journée
+        ClosingPositions --> [*]: Retourner métriques
+    }
+    
+    ProcessingFile1 --> Aggregating
+    ProcessingFile2 --> Aggregating
+    ProcessingFileN --> Aggregating
+    
+    Aggregating --> CalculatingMetrics: Calculer totaux
+    CalculatingMetrics --> SavingCache: add_result()
+    SavingCache --> ReturningPnL: Retourner total_pnl
+    ReturningPnL --> [*]

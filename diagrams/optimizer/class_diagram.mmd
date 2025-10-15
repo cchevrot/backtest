@@ -1,0 +1,24 @@
+classDiagram
+    class Optimizer {
+        -dict param_configs
+        -SimulationRunner simulation_runner
+        +__init__(param_configs, simulation_runner)
+        +coordinate_descent_step(current_params, param_idx, iteration) tuple
+        -_parse_time_to_minutes(time_str) int
+        -_minutes_to_time(total_minutes) str
+    }
+    
+    class SimulationRunner {
+        -list data_files
+        -SimulationMemoire memoire
+        +run_simulation_display(params, iteration) float
+    }
+    
+    class SimulationMemoire {
+        +has_been_tested(params) bool
+        +get_pnl(params) dict
+        +add_result(params, metrics)
+    }
+    
+    Optimizer --> SimulationRunner : utilise pour exécuter simulations
+    SimulationRunner --> SimulationMemoire : cache les résultats

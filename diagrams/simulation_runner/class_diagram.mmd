@@ -1,0 +1,43 @@
+classDiagram
+    class SimulationRunner {
+        -list data_files
+        -SimulationMemoire memoire
+        +__init__(data_files, memoire)
+        +run_single_file_simulation(data_file, params) dict
+        +run_simulation(params) dict
+        +run_simulation_display(params, iteration) float
+    }
+    
+    class PriceLogger {
+        +read_all() iterator
+    }
+    
+    class SortedPnlTable {
+        +update_ticker(ticker, price, timestamp)
+        +has_been_resorted() bool
+    }
+    
+    class AlgoEchappee {
+        +Portfolio portfolio
+        +main(table, timestamp)
+    }
+    
+    class Portfolio {
+        +float total_pnl
+        +list trades
+        +refresh_prices(table)
+        +close_all(table, timestamp)
+    }
+    
+    class SimulationMemoire {
+        +has_been_tested(params) bool
+        +get_pnl(params) dict
+        +add_result(params, metrics)
+    }
+    
+    SimulationRunner --> PriceLogger : utilise
+    SimulationRunner --> SortedPnlTable : crée
+    SimulationRunner --> AlgoEchappee : crée
+    SimulationRunner --> SimulationMemoire : cache
+    AlgoEchappee --> Portfolio : contient
+    Portfolio --> SortedPnlTable : lit prix

@@ -1,0 +1,33 @@
+flowchart TD
+    Start([Start coordinate_descent_step]) --> GetParam[Get parameter to optimize]
+    GetParam --> GetConfig[Get parameter configuration\nmin_value, max_value, step]
+    GetConfig --> RunBaseline[Run simulation with current parameters\nto establish baseline PnL]
+    RunBaseline --> CheckParamType{Is parameter\ntime-based?}
+    
+    CheckParamType -->|Yes| ConvertTime[Convert min/max values\nfrom HH:MM to minutes]
+    ConvertTime --> GenerateTimeValues[Generate all possible time values\nwithin range]
+    
+    CheckParamType -->|No| GenerateNumericValues[Generate all possible numeric values\nwithin range]
+    
+    GenerateTimeValues --> LoopValues
+    GenerateNumericValues --> LoopValues
+    
+    LoopValues[For each possible value] --> CreateTestParams[Create test parameters\nwith new value]
+    CreateTestParams --> CheckTested{Already tested?}
+    
+    CheckTested -->|Yes| NextValue[Skip to next value]
+    NextValue --> LoopValues
+    
+    CheckTested -->|No| RunSimulation[Run simulation with test parameters]
+    RunSimulation --> SetUntested[Set has_untested = True]
+    SetUntested --> ComparePnL{Is PnL >= best PnL?}
+    
+    ComparePnL -->|Yes| UpdateBest[Update best parameters\nand best PnL]
+    ComparePnL -->|No| ContinueLoop[Continue to next value]
+    
+    UpdateBest --> ContinueLoop
+    ContinueLoop --> LoopValues
+    
+    LoopValues --> |All values tested| ReturnResults[Return best parameters,\nbest PnL, and has_untested flag]
+    
+    ReturnResults --> End([End coordinate_descent_step])

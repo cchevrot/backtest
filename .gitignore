@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data files
+*.lz4
+*.csv
+*.json
+!best_config.json
+
+# Reports
+*.html
+!index.html
+
+# Logs
+*.log
+
