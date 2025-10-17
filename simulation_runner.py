@@ -247,3 +247,61 @@ class SimulationRunner:
         # Écriture séquentielle dans memoire_config.json
         self.memoire.add_result(params, metrics)
         return metrics['total_pnl']
+
+
+def main():
+    """Point d'entrée principal pour tester SimulationRunner en ligne de commande."""
+    import argparse
+    import glob
+    from memoire_config import SimulationMemoire
+    
+    parser = argparse.ArgumentParser(description='Exécuter une simulation de trading avec AlgoEchappee')
+    parser.add_argument('--data-dir', type=str, default='../data', 
+                        help='Répertoire contenant les fichiers de données (défaut: ../data)')
+    parser.add_argument('--data-pattern', type=str, default='**/*.lz4',
+                        help='Pattern pour trouver les fichiers de données (défaut: **/*.lz4)')
+    parser.add_argument('--memoire', type=str, default='memoire_config.json',
+                        help='Fichier de cache des simulations (défaut: memoire_config.json)')
+    args = parser.parse_args()
+    
+    data_files = glob.glob(os.path.join(args.data_dir, args.data_pattern), recursive=True)
+    
+    if not data_files:
+        print(f"{Fore.RED}Aucun fichier de données trouvé dans {args.data_dir} avec le pattern {args.data_pattern}")
+        print(f"{Fore.YELLOW}Veuillez vérifier le chemin et le pattern.")
+        return
+    
+    print(f"{Fore.CYAN}Fichiers de données trouvés: {len(data_files)}")
+    for f in data_files[:5]:
+        print(f"{Fore.CYAN}  - {f}")
+    if len(data_files) > 5:
+        print(f"{Fore.CYAN}  ... et {len(data_files) - 5} autres")
+    
+    memoire = SimulationMemoire(args.memoire)
+    runner = SimulationRunner(data_files, memoire)
+    
+    test_params = {
+        'take_profit_market_pnl': 0.015,
+        'min_escape_time': 120.0,
+        'trail_stop_market_pnl': 0.008,
+        'stop_echappee_threshold': 0.012,
+        'start_echappee_threshold': 0.010,
+        'min_market_pnl': 0.005,
+        'top_n_threshold': 10,
+        'trade_interval_minutes': 5.0,
+        'trade_value_eur': 1000.0,
+        'max_pnl_timeout_minutes': 60.0,
+        'max_trades_per_day': 3,
+        'trade_cutoff_hour': "14:00",
+        'trade_start_hour': "09:30"
+    }
+    
+    print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Simulation de test ==={Style.RESET_ALL}")
+    total_pnl = runner.run_simulation_display(test_params, iteration=1)
+    
+    print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Résultat final ==={Style.RESET_ALL}")
+    print(f"{Fore.CYAN}PnL total: {Fore.GREEN if total_pnl >= 0 else Fore.RED}${total_pnl:.2f}{Style.RESET_ALL}")
+
+
+if __name__ == "__main__":
+    main()
