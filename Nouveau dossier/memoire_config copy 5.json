@@ -1,0 +1,2554 @@
+{
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 2.739258289337158,
+        "total_invested_capital": 593.7603415846825,
+        "total_roi": 0.46134072916125934,
+        "daily_pnl_std": 2.1703717708587646,
+        "positive_or_zero_pnl_days": 1,
+        "negative_pnl_days": 1
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 173.11591774970293,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.3611283745582172,
+        "daily_pnl_std": 11.878176638112889,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 262.7187312319875,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 5.100809870924087,
+        "daily_pnl_std": 13.390439996394136,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 291.68163392320275,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 5.663138484666941,
+        "daily_pnl_std": 18.36287938414347,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 271.69374218955636,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 5.275064002973752,
+        "daily_pnl_std": 22.753275801414826,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 314.7907557748258,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 6.111813142527782,
+        "daily_pnl_std": 24.535602216424106,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 286.13365533575416,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 5.555421825828693,
+        "daily_pnl_std": 29.478797255624595,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 239.73894813284278,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 4.654646386827831,
+        "daily_pnl_std": 33.65458531357426,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 201.30804547294974,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.90849202350226,
+        "daily_pnl_std": 33.56359054754883,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 205.78402933105826,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.9953953917488754,
+        "daily_pnl_std": 33.66133203266402,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 160.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 176.94002863392234,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.435375317112573,
+        "daily_pnl_std": 32.94073251021235,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 170.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 173.52702447399497,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.3691102083141833,
+        "daily_pnl_std": 31.642897968423092,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 180.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 157.99851724132895,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.067616810406608,
+        "daily_pnl_std": 30.924088594677087,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 190.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 174.76851173862815,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.3932142775762855,
+        "daily_pnl_std": 31.887018895091632,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 0.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 390.3926236666739,
+        "total_invested_capital": 5247.324778236449,
+        "total_roi": 7.439841065028936,
+        "daily_pnl_std": 24.872825917967994,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 5.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 390.3926236666739,
+        "total_invested_capital": 5247.324778236449,
+        "total_roi": 7.439841065028936,
+        "daily_pnl_std": 24.872825917967994,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 390.3926236666739,
+        "total_invested_capital": 5247.324778236449,
+        "total_roi": 7.439841065028936,
+        "daily_pnl_std": 24.872825917967994,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 15.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 390.3926236666739,
+        "total_invested_capital": 5247.324778236449,
+        "total_roi": 7.439841065028936,
+        "daily_pnl_std": 24.872825917967994,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 20.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 390.3926236666739,
+        "total_invested_capital": 5247.324778236449,
+        "total_roi": 7.439841065028936,
+        "daily_pnl_std": 24.872825917967994,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 25.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 390.3926236666739,
+        "total_invested_capital": 5247.324778236449,
+        "total_roi": 7.439841065028936,
+        "daily_pnl_std": 24.872825917967994,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 30.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 386.19212049618363,
+        "total_invested_capital": 5247.416981436312,
+        "total_roi": 7.359661369820775,
+        "daily_pnl_std": 24.880070604262325,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 284.98132598772645,
+        "total_invested_capital": 4949.70428160578,
+        "total_roi": 5.757542466663745,
+        "daily_pnl_std": 23.786107575090238,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 259.113018874079,
+        "total_invested_capital": 4858.719484843314,
+        "total_roi": 5.332948726148469,
+        "daily_pnl_std": 22.966802711726086,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 221.60166418924928,
+        "total_invested_capital": 4728.026440598071,
+        "total_roi": 4.686980222581365,
+        "daily_pnl_std": 21.601180485956064,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 175.04666200652719,
+        "total_invested_capital": 4542.9225494638085,
+        "total_roi": 3.8531729321951036,
+        "daily_pnl_std": 22.52079097124868,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 60.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 146.088375184685,
+        "total_invested_capital": 4455.415037669241,
+        "total_roi": 3.278894871735858,
+        "daily_pnl_std": 20.82202115300633,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 129.8018659092486,
+        "total_invested_capital": 4140.103049553931,
+        "total_roi": 3.1352327310604964,
+        "daily_pnl_std": 19.294489763549436,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 92.38437173143029,
+        "total_invested_capital": 3853.2179463282228,
+        "total_roi": 2.397590092703281,
+        "daily_pnl_std": 17.553879565272357,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 75.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 85.71238646283746,
+        "total_invested_capital": 3673.303327716887,
+        "total_roi": 2.3333871127955916,
+        "daily_pnl_std": 15.957001301625628,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 246.39316035434604,
+        "total_invested_capital": 9870.544318884611,
+        "total_roi": 2.4962469383065278,
+        "daily_pnl_std": 44.6952489138559,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 336.11244110390544,
+        "total_invested_capital": 6464.971749059856,
+        "total_roi": 5.198977724114314,
+        "daily_pnl_std": 29.313342375169768,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 600, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 313.287226755172,
+        "total_invested_capital": 5557.450522504747,
+        "total_roi": 5.637247250092893,
+        "daily_pnl_std": 23.40701017589154,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 276.46297627314925,
+        "total_invested_capital": 4649.077602893114,
+        "total_roi": 5.946619951043767,
+        "daily_pnl_std": 24.11978639969852,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 100.53240576013923,
+        "total_invested_capital": 3979.6850914508104,
+        "total_roi": 2.526139718343637,
+        "daily_pnl_std": 24.810320693825155,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 1500, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 93.08282515406609,
+        "total_invested_capital": 3683.3133812323213,
+        "total_roi": 2.5271492137582787,
+        "daily_pnl_std": 19.923126686410434,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 1800, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 97.05792182683945,
+        "total_invested_capital": 3189.2165866345167,
+        "total_roi": 3.0433154723198563,
+        "daily_pnl_std": 16.937585974875162,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 58.28710758686066,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 1.8851999843806464,
+        "daily_pnl_std": 12.36336126296069,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2400, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 46.60660898685455,
+        "total_invested_capital": 3096.0639862269163,
+        "total_roi": 1.5053503155680152,
+        "daily_pnl_std": 10.938421957372,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2700, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 32.051095366477966,
+        "total_invested_capital": 3043.513210400939,
+        "total_roi": 1.053095326051031,
+        "daily_pnl_std": 10.334854612923127,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 3000, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 25.826274752616882,
+        "total_invested_capital": 2766.6525046154857,
+        "total_roi": 0.9334845886692323,
+        "daily_pnl_std": 8.739775266004905,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 1.877501904964447,
+        "total_invested_capital": 2677.8416955918074,
+        "total_roi": 0.07011250545747873,
+        "daily_pnl_std": 8.802670051917554,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 20.0}": {
+        "total_pnl": 71.12450049817562,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 1.380916208388979,
+        "daily_pnl_std": 15.60979348295465,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 151.55486704409122,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 2.9425102587088197,
+        "daily_pnl_std": 19.861122426417314,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 326.69194054976106,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 6.342880339339405,
+        "daily_pnl_std": 26.985381241284273,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": -3, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 80.66436854749918,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 1.566137311144435,
+        "daily_pnl_std": 13.483150253210942,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 167.8631128743291,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 3.259142654572817,
+        "daily_pnl_std": 17.841233169488515,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 313.77402693778276,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 6.092072865678384,
+        "daily_pnl_std": 22.480938254105844,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": -1.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 281.91522259265184,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 5.47351893571141,
+        "daily_pnl_std": 21.981977194879413,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 308.08422665297985,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 5.981602670728021,
+        "daily_pnl_std": 23.623360876227373,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 345.533633813262,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 6.70870082930867,
+        "daily_pnl_std": 24.92462783637516,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 372.24523413553834,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.227319330369157,
+        "daily_pnl_std": 24.475541919278236,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 0.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 366.2602312602103,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.111117635877015,
+        "daily_pnl_std": 24.37682863550304,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 2.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -3, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -0.5, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 1.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 1.5, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 381.04152608290315,
+        "total_invested_capital": 5150.529776252806,
+        "total_roi": 7.398103547323329,
+        "daily_pnl_std": 24.576858981968936,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 2.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 346.76765048876405,
+        "total_invested_capital": 5143.619251288474,
+        "total_roi": 6.741705276919534,
+        "daily_pnl_std": 24.222473312096774,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 750.0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 278.47558936849236,
+        "total_invested_capital": 4360.579003967345,
+        "total_roi": 6.3862067196840036,
+        "daily_pnl_std": 21.519723978967896,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 6.139381743967533,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": 0.15198664665566808,
+        "daily_pnl_std": 11.632184729048927,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -6.878825336694717,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -0.17029232575113282,
+        "daily_pnl_std": 1.4859608173773207,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -1.5060221254825592,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -0.037283111262179626,
+        "daily_pnl_std": 3.1620388019825048,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 6.666768409311771,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": 0.16504264058133422,
+        "daily_pnl_std": 8.736308577057295,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -7.347016476094723,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -0.18188287415467894,
+        "daily_pnl_std": 14.088342728051641,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 9.222572781145573,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": 0.22831418031977763,
+        "daily_pnl_std": 16.6577121047145,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 4.408512331545353,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": 0.109137211848751,
+        "daily_pnl_std": 19.37072740639046,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -64.1245042309165,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -1.5874673986660859,
+        "daily_pnl_std": 23.366422349743747,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -80.13810219615698,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -1.983900322554619,
+        "daily_pnl_std": 24.573049325045275,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -67.03011574596167,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -1.6593987704348696,
+        "daily_pnl_std": 25.239976683116815,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 160.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -100.9536047205329,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -2.4992092834676742,
+        "daily_pnl_std": 23.093144709837272,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 170.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -98.59060361236334,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -2.4407107848481333,
+        "daily_pnl_std": 23.414979346802323,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 180.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -86.42640855163336,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -2.139573749614514,
+        "daily_pnl_std": 24.173549628367407,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 190.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -70.43641426414251,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -1.7437251588037266,
+        "daily_pnl_std": 25.424963252885377,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 0.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 68.27166191488504,
+        "total_invested_capital": 4748.111706793308,
+        "total_roi": 1.437869749719791,
+        "daily_pnl_std": 17.96601940939828,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 5.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 68.27166191488504,
+        "total_invested_capital": 4748.111706793308,
+        "total_roi": 1.437869749719791,
+        "daily_pnl_std": 17.96601940939828,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 8.718319594860077,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.32556606353758827,
+        "daily_pnl_std": 7.8665680190058564,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 19.777520716190338,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.7385470899574806,
+        "daily_pnl_std": 5.412597948749224,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 4.849920690059662,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.1811093950333177,
+        "daily_pnl_std": 6.664146124884859,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -9.057587921619415,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -0.33823527718870755,
+        "daily_pnl_std": 7.394038821855622,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -9.26368123292923,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -0.34593136900485527,
+        "daily_pnl_std": 7.318512033101466,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 20.604303896427155,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.7694214508317345,
+        "daily_pnl_std": 9.482282612839288,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 24.554311096668243,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.9169255978333863,
+        "daily_pnl_std": 12.26882643096771,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -45.89568489789963,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -1.71387126876834,
+        "daily_pnl_std": 20.327556404377653,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -50.32568460702896,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -1.879299657929961,
+        "daily_pnl_std": 20.1509090976038,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -54.43569427728653,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -2.032778737801735,
+        "daily_pnl_std": 20.73015802616699,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 160.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -96.96529656648636,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -3.620951211919003,
+        "daily_pnl_std": 18.237099168669605,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 170.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -94.99029809236526,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -3.547199329837113,
+        "daily_pnl_std": 18.26946083136047,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 180.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -103.10519677400589,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -3.850231994680654,
+        "daily_pnl_std": 18.195626084302923,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 190.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": -103.10519677400589,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": -3.850231994680654,
+        "daily_pnl_std": 18.195626084302923,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 0.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 24.554311096668243,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.9169255978333863,
+        "daily_pnl_std": 12.26882643096771,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 5.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 24.554311096668243,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.9169255978333863,
+        "daily_pnl_std": 12.26882643096771,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 15.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 24.554311096668243,
+        "total_invested_capital": 2677.8956934660673,
+        "total_roi": 0.9169255978333863,
+        "daily_pnl_std": 12.26882643096771,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 80.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 200.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -248.25552022457123,
+        "total_invested_capital": 3055.193902924657,
+        "total_roi": -8.125687865078637,
+        "daily_pnl_std": 27.691130104752666,
+        "positive_or_zero_pnl_days": 8,
+        "negative_pnl_days": 14
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 80.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -3.6060165762901306,
+        "total_invested_capital": 3055.193902924657,
+        "total_roi": -0.11802905775761682,
+        "daily_pnl_std": 0.9489420581586078,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 80.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -3.6060165762901306,
+        "total_invested_capital": 3055.193902924657,
+        "total_roi": -0.11802905775761682,
+        "daily_pnl_std": 0.9489420581586078,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 80.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 2.0252615809440613,
+        "total_invested_capital": 3055.193902924657,
+        "total_roi": 0.06628913402207734,
+        "daily_pnl_std": 1.2095104867363309,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 80.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -15.560025215148926,
+        "total_invested_capital": 3055.193902924657,
+        "total_roi": -0.5092974688203497,
+        "daily_pnl_std": 9.169567626198319,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 80.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -9.489515006542206,
+        "total_invested_capital": 3055.193902924657,
+        "total_roi": -0.3106027083079127,
+        "daily_pnl_std": 11.19359974626684,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -12.12759742885828,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -0.12286468080803548,
+        "daily_pnl_std": 32.617333176251385,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -15.79684366285801,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -0.1600378117592419,
+        "daily_pnl_std": 29.92412343138387,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -59.326226472854614,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -0.6010339576236016,
+        "daily_pnl_std": 28.720691932992693,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -44.35266097635031,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -0.4493367763741238,
+        "daily_pnl_std": 32.170797870649764,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -45.237967915832996,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -0.4583058203397363,
+        "daily_pnl_std": 38.85138216063767,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -17.66137982159853,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -0.17892742623915303,
+        "daily_pnl_std": 42.786177316892164,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -59.56397353857756,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -0.6034425729750303,
+        "daily_pnl_std": 41.63188410431059,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -170.41516181081533,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -1.7264758814398324,
+        "daily_pnl_std": 39.816224204283834,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -193.65887292474508,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -1.9619579019768563,
+        "daily_pnl_std": 39.70764894326374,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -176.0327716693282,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -1.7833878828662546,
+        "daily_pnl_std": 40.34173067489502,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 160.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -202.75408371537924,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -2.0541014759393263,
+        "daily_pnl_std": 40.32710650479992,
+        "positive_or_zero_pnl_days": 8,
+        "negative_pnl_days": 14
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 170.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -186.61057146638632,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -1.890551564983892,
+        "daily_pnl_std": 41.828494842655516,
+        "positive_or_zero_pnl_days": 8,
+        "negative_pnl_days": 14
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 180.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -181.66407354921103,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -1.840438598151304,
+        "daily_pnl_std": 42.39649863452898,
+        "positive_or_zero_pnl_days": 8,
+        "negative_pnl_days": 14
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 190.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -161.0240808352828,
+        "total_invested_capital": 9870.69461223483,
+        "total_roi": -1.6313348468474727,
+        "daily_pnl_std": 44.483408886267505,
+        "positive_or_zero_pnl_days": 8,
+        "negative_pnl_days": 14
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 0.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.226014725863934,
+        "total_invested_capital": 12108.649789631367,
+        "total_roi": -0.043159351510347325,
+        "daily_pnl_std": 38.92230574566319,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 5.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.226014725863934,
+        "total_invested_capital": 12108.649789631367,
+        "total_roi": -0.043159351510347325,
+        "daily_pnl_std": 38.92230574566319,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.226014725863934,
+        "total_invested_capital": 12108.649789631367,
+        "total_roi": -0.043159351510347325,
+        "daily_pnl_std": 38.92230574566319,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 15.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.226014725863934,
+        "total_invested_capital": 12108.649789631367,
+        "total_roi": -0.043159351510347325,
+        "daily_pnl_std": 38.92230574566319,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 20.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.226014725863934,
+        "total_invested_capital": 12108.649789631367,
+        "total_roi": -0.043159351510347325,
+        "daily_pnl_std": 38.92230574566319,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 25.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -17.286625020205975,
+        "total_invested_capital": 12115.121702492237,
+        "total_roi": -0.14268635053538004,
+        "daily_pnl_std": 39.30924935063291,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 30.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -55.71242751926184,
+        "total_invested_capital": 11415.290662288666,
+        "total_roi": -0.4880508886498382,
+        "daily_pnl_std": 37.58081427448356,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 48.48797645419836,
+        "total_invested_capital": 8799.270537137985,
+        "total_roi": 0.5510454105206926,
+        "daily_pnl_std": 26.666076518715116,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 28.996226124465466,
+        "total_invested_capital": 8097.133092612028,
+        "total_roi": 0.3581048476394954,
+        "daily_pnl_std": 21.538212185314567,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 76.3737168237567,
+        "total_invested_capital": 7247.581191539764,
+        "total_roi": 1.0537821489038184,
+        "daily_pnl_std": 17.320865470372283,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 98.19139360636473,
+        "total_invested_capital": 6737.491244807839,
+        "total_roi": 1.4573880698106234,
+        "daily_pnl_std": 14.078292035570616,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 60.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 44.82550188153982,
+        "total_invested_capital": 6394.193736240268,
+        "total_roi": 0.7010344654945792,
+        "daily_pnl_std": 12.646495587704552,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 42.057431161403656,
+        "total_invested_capital": 5794.839011698961,
+        "total_roi": 0.7257739356778617,
+        "daily_pnl_std": 12.863603761904095,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 30.450732350349426,
+        "total_invested_capital": 5403.301317036152,
+        "total_roi": 0.5635579169782896,
+        "daily_pnl_std": 11.92598055865287,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 75.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -91.14051098376513,
+        "total_invested_capital": 5327.286465495825,
+        "total_roi": -1.7108242925187322,
+        "daily_pnl_std": 11.94055614882085,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 114.10516748577356,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 2.1433724367636064,
+        "daily_pnl_std": 10.852503931529485,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 600, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 101.20742762088776,
+        "total_invested_capital": 4754.800454758108,
+        "total_roi": 2.128531545831959,
+        "daily_pnl_std": 13.315065565242284,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 39.32358268648386,
+        "total_invested_capital": 4244.110198825598,
+        "total_roi": 0.9265448078460645,
+        "daily_pnl_std": 10.57617538210602,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 7.063788421452045,
+        "total_invested_capital": 3871.631202235818,
+        "total_roi": 0.18244993008044766,
+        "daily_pnl_std": 9.575874695078115,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 1500, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 17.86440271139145,
+        "total_invested_capital": 3479.4673865810037,
+        "total_roi": 0.5134234848783963,
+        "daily_pnl_std": 6.536167210766698,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 1800, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 49.390833139419556,
+        "total_invested_capital": 2987.224387153983,
+        "total_roi": 1.6534021800242351,
+        "daily_pnl_std": 7.400796746697553,
+        "positive_or_zero_pnl_days": 18,
+        "negative_pnl_days": 4
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 22.80352693796158,
+        "total_invested_capital": 2993.5860233306885,
+        "total_roi": 0.7617461719904138,
+        "daily_pnl_std": 6.184282531224054,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 2400, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 28.26231551170349,
+        "total_invested_capital": 2996.0802890509367,
+        "total_roi": 0.9433096841558976,
+        "daily_pnl_std": 6.03692967697407,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 190.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -48.353759214282036,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": -0.9082858997312112,
+        "daily_pnl_std": 36.85871430531391,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 64.0972841233015,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 1.2040151650311441,
+        "daily_pnl_std": 5.477418811962192,
+        "positive_or_zero_pnl_days": 19,
+        "negative_pnl_days": 3
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 174.09837478399277,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 3.270295868448507,
+        "daily_pnl_std": 10.37200372049098,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 189.92687109857798,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 3.5676212522469766,
+        "daily_pnl_std": 14.845520951409107,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 224.31138322502375,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 4.21350624735534,
+        "daily_pnl_std": 23.191593501944553,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 166.25420198589563,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 3.122949484975134,
+        "daily_pnl_std": 28.411617119368785,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 222.48706271499395,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 4.179237875613913,
+        "daily_pnl_std": 30.614236647609253,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 149.91377168893814,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 2.8160078391664785,
+        "daily_pnl_std": 34.66020544938286,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 23.13387532532215,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 0.43455096574835955,
+        "daily_pnl_std": 39.37273282899162,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -9.932742461562157,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": -0.18657845987771038,
+        "daily_pnl_std": 36.82268280799746,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 13.335644915699959,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": 0.25049920497546035,
+        "daily_pnl_std": 37.30139647352243,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 160.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -47.23073796927929,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": -0.8871908622716769,
+        "daily_pnl_std": 36.26249444136898,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 170.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -44.69544903934002,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": -0.8395675290660073,
+        "daily_pnl_std": 36.48217128113676,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 180.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -45.45666615664959,
+        "total_invested_capital": 5323.627640657127,
+        "total_roi": -0.8538663712971218,
+        "daily_pnl_std": 36.60978733151186,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 0.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 215.05826149135828,
+        "total_invested_capital": 6734.387367360294,
+        "total_roi": 3.1934346772757083,
+        "daily_pnl_std": 30.59623407371399,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 5.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 215.05826149135828,
+        "total_invested_capital": 6734.387367360294,
+        "total_roi": 3.1934346772757083,
+        "daily_pnl_std": 30.59623407371399,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 215.05826149135828,
+        "total_invested_capital": 6734.387367360294,
+        "total_roi": 3.1934346772757083,
+        "daily_pnl_std": 30.59623407371399,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 15.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 215.05826149135828,
+        "total_invested_capital": 6734.387367360294,
+        "total_roi": 3.1934346772757083,
+        "daily_pnl_std": 30.59623407371399,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 20.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 215.05826149135828,
+        "total_invested_capital": 6734.387367360294,
+        "total_roi": 3.1934346772757083,
+        "daily_pnl_std": 30.59623407371399,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 25.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 215.05826149135828,
+        "total_invested_capital": 6734.387367360294,
+        "total_roi": 3.1934346772757083,
+        "daily_pnl_std": 30.59623407371399,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 30.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 205.30666200071573,
+        "total_invested_capital": 6651.150566749275,
+        "total_roi": 3.0867841577229336,
+        "daily_pnl_std": 30.96810877219241,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 211.0213823094964,
+        "total_invested_capital": 6464.971749059856,
+        "total_roi": 3.26407276783821,
+        "daily_pnl_std": 30.191258160929788,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 264.3634820356965,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.277411709985536,
+        "daily_pnl_std": 27.243322371180536,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 261.6962012425065,
+        "total_invested_capital": 5808.569123201072,
+        "total_roi": 4.505347112031734,
+        "daily_pnl_std": 27.373108579623963,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 184.86549047380686,
+        "total_invested_capital": 5538.582135014236,
+        "total_roi": 3.3377764555500575,
+        "daily_pnl_std": 26.24258123226996,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 60.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 153.1690546348691,
+        "total_invested_capital": 5248.705670051277,
+        "total_roi": 2.9182252590165287,
+        "daily_pnl_std": 23.714007836394945,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 126.68623562902212,
+        "total_invested_capital": 4776.992993019521,
+        "total_roi": 2.6520079852355862,
+        "daily_pnl_std": 19.772209873466853,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 79.36374970525503,
+        "total_invested_capital": 4456.13028421253,
+        "total_roi": 1.7810015561356034,
+        "daily_pnl_std": 17.163359214550308,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 75.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 4.390551410615444,
+        "total_invested_capital": 4472.662382520735,
+        "total_roi": 0.09816415895315099,
+        "daily_pnl_std": 18.09633028249279,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 65.9154110327363,
+        "total_invested_capital": 8799.270537137985,
+        "total_roi": 0.749100857332836,
+        "daily_pnl_std": 35.05793856514633,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 600, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 220.19844961166382,
+        "total_invested_capital": 5263.5749191865325,
+        "total_roi": 4.183439069310231,
+        "daily_pnl_std": 22.411259937626035,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 154.97038576751947,
+        "total_invested_capital": 4548.92819622159,
+        "total_roi": 3.4067450415295686,
+        "daily_pnl_std": 21.910990611253755,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 67.46708447486162,
+        "total_invested_capital": 3984.027591779828,
+        "total_roi": 1.6934391873707206,
+        "daily_pnl_std": 20.964697394273298,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 1500, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 109.83818998932838,
+        "total_invested_capital": 3685.84987667948,
+        "total_roi": 2.9799963011049098,
+        "daily_pnl_std": 15.180684342711075,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 1800, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 61.882511496543884,
+        "total_invested_capital": 3189.507578417659,
+        "total_roi": 1.9401901382922662,
+        "daily_pnl_std": 13.710805199751725,
+        "positive_or_zero_pnl_days": 18,
+        "negative_pnl_days": 4
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -17.40677148103714,
+        "total_invested_capital": 3092.775312244892,
+        "total_roi": -0.5628204354878411,
+        "daily_pnl_std": 12.372231694044762,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 2400, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -52.83112347126007,
+        "total_invested_capital": 3096.201783582568,
+        "total_roi": -1.7063204262523866,
+        "daily_pnl_std": 10.446717660102395,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 2700, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -41.95010498166084,
+        "total_invested_capital": 3045.8517135828733,
+        "total_roi": -1.3772865170876756,
+        "daily_pnl_std": 10.15615326096387,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3000, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -40.990916050970554,
+        "total_invested_capital": 2667.526501469314,
+        "total_roi": -1.5366638730071522,
+        "daily_pnl_std": 5.779058532770895,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -41.93757066130638,
+        "total_invested_capital": 2578.796696946025,
+        "total_roi": -1.6262457102947092,
+        "daily_pnl_std": 6.784058232657633,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 20.0}": {
+        "total_pnl": 156.0555438771844,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 2.524984939857529,
+        "daily_pnl_std": 14.535025301866195,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 160.93116378039122,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 2.6038726648444444,
+        "daily_pnl_std": 17.270630682420027,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 190.34726924449205,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 3.0798264274648224,
+        "daily_pnl_std": 22.794192338170898,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 264.93918124586344,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.286726546225531,
+        "daily_pnl_std": 27.218339367161956,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -3, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 64.64947365224361,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 1.0460310687206356,
+        "daily_pnl_std": 14.931302550584032,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 233.67516115307808,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 3.780873451023653,
+        "daily_pnl_std": 18.90021132871249,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 215.60390603542328,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 3.4884798206357948,
+        "daily_pnl_std": 18.232853215339425,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 185.50466865301132,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 3.0014729562619213,
+        "daily_pnl_std": 22.236111782931406,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 257.9151289239526,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.173077098798311,
+        "daily_pnl_std": 28.42924648469409,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 0.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 280.9335944317281,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.5455167911139185,
+        "daily_pnl_std": 26.467385750310285,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 286.25859304890037,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.631675481661328,
+        "daily_pnl_std": 26.48482846060653,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 273.94158869609237,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.432385858734022,
+        "daily_pnl_std": 27.27561116309706,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 2.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 268.5889877639711,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.34578056162705,
+        "daily_pnl_std": 27.332712926602646,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 276.3744859062135,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 4.471750232873859,
+        "daily_pnl_std": 27.24364932783852,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -3, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -0.5, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 1.0, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 1.5, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 317.3341951034963,
+        "total_invested_capital": 6180.454442076385,
+        "total_roi": 5.134479965471353,
+        "daily_pnl_std": 27.011490478020026,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 2.0, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 302.0785958431661,
+        "total_invested_capital": 6164.18024032563,
+        "total_roi": 4.900547746267855,
+        "daily_pnl_std": 26.64730597315858,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 308.00186882540584,
+        "total_invested_capital": 5647.014368675649,
+        "total_roi": 5.45424269741391,
+        "daily_pnl_std": 29.0180085318736,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 4.4904338121414185,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.150070238440778,
+        "daily_pnl_std": 7.197773883386344,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -1.5375922918319702,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -0.05138631399844339,
+        "daily_pnl_std": 9.32912713143796,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 3.9637166261672974,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.13246735707188487,
+        "daily_pnl_std": 9.789360239297531,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 5.908932149410248,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.19747643405738008,
+        "daily_pnl_std": 11.29530411005522,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 1.6561203598976135,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.05534752046104422,
+        "daily_pnl_std": 14.550610298474076,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 50.43069487810135,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 1.685393153914824,
+        "daily_pnl_std": 16.471549770118283,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 57.98940163850784,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 1.9380050335891346,
+        "daily_pnl_std": 19.70865189200383,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -22.663594901561737,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -0.7574170410009058,
+        "daily_pnl_std": 25.978834611831445,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -70.16939491033554,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -2.3450602471785267,
+        "daily_pnl_std": 25.203566333196505,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -68.96460741758347,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -2.30479626515102,
+        "daily_pnl_std": 26.82151473995451,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 160.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -130.89540308713913,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -4.3745226349792325,
+        "daily_pnl_std": 21.73040922542017,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 170.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -156.84041398763657,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -5.2416045551399595,
+        "daily_pnl_std": 20.800777004003496,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 180.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -179.76561158895493,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -6.007764354896841,
+        "daily_pnl_std": 19.568556859611334,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 190.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -173.47071450948715,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -5.797388977996366,
+        "daily_pnl_std": 19.747556460523697,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 0.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 5.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 15.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 20.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 25.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 30.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 69.8956897854805,
+        "total_invested_capital": 3091.8262290358543,
+        "total_roi": 2.2606603543588073,
+        "daily_pnl_std": 19.541981441534446,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 65.75540655851364,
+        "total_invested_capital": 3092.775312244892,
+        "total_roi": 2.1260971108433044,
+        "daily_pnl_std": 19.669223263723058,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 46.15869861841202,
+        "total_invested_capital": 2985.6051179766655,
+        "total_roi": 1.5460416496637577,
+        "daily_pnl_std": 19.934781715624485,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 36.41709327697754,
+        "total_invested_capital": 2993.5860233306885,
+        "total_roi": 1.2165039852925148,
+        "daily_pnl_std": 19.851770238181064,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 60.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 51.55269533395767,
+        "total_invested_capital": 2902.259020268917,
+        "total_roi": 1.7762954641168074,
+        "daily_pnl_std": 18.75542484289707,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 70.72130471467972,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 2.715010584704111,
+        "daily_pnl_std": 17.265204148886436,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 50.132910907268524,
+        "total_invested_capital": 2507.1613035798073,
+        "total_roi": 1.999588571971301,
+        "daily_pnl_std": 16.842420993306664,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 75.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 48.146336019039154,
+        "total_invested_capital": 2316.1049812436104,
+        "total_roi": 2.078763113457294,
+        "daily_pnl_std": 15.494317524884448,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -10.181046161800623,
+        "total_invested_capital": 5794.839011698961,
+        "total_roi": -0.1756916135417486,
+        "daily_pnl_std": 28.865758256973457,
+        "positive_or_zero_pnl_days": 9,
+        "negative_pnl_days": 13
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 10.51442575827241,
+        "total_invested_capital": 4776.992993019521,
+        "total_roi": 0.22010553027054527,
+        "daily_pnl_std": 32.92716667230302,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 600, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -6.2849280051887035,
+        "total_invested_capital": 4379.825660131872,
+        "total_roi": -0.14349721867695236,
+        "daily_pnl_std": 32.1896445141291,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -96.38627818599343,
+        "total_invested_capital": 4039.4218038618565,
+        "total_roi": -2.386140464307147,
+        "daily_pnl_std": 28.355715746332447,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 1200, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -122.7517992593348,
+        "total_invested_capital": 3570.8220099955797,
+        "total_roi": -3.437634217435743,
+        "daily_pnl_std": 26.56871976826169,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 1500, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -30.780167929828167,
+        "total_invested_capital": 3179.383980669081,
+        "total_roi": -0.9681173496807604,
+        "daily_pnl_std": 21.63679693446828,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 1800, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 36.57076780498028,
+        "total_invested_capital": 2679.5295464247465,
+        "total_roi": 1.3648204720778716,
+        "daily_pnl_std": 21.788943419247378,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2400, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 21.70152734220028,
+        "total_invested_capital": 2604.1085830181837,
+        "total_roi": 0.833357237241161,
+        "daily_pnl_std": 16.55652711800328,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2700, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 15.343298763036728,
+        "total_invested_capital": 2348.2285070866346,
+        "total_roi": 0.6533988799102275,
+        "daily_pnl_std": 13.491809176867074,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 3000, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -16.998703815042973,
+        "total_invested_capital": 2366.5668950006366,
+        "total_roi": -0.7182853715630295,
+        "daily_pnl_std": 11.265109432930272,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 3300, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 0.9515223205089569,
+        "total_invested_capital": 2280.318995937705,
+        "total_roi": 0.04172759698112654,
+        "daily_pnl_std": 11.190625806818781,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 20.0}": {
+        "total_pnl": 40.88059318065643,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 1.569417357927028,
+        "daily_pnl_std": 7.355571314327173,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 33.506213903427124,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 1.2863128836236244,
+        "daily_pnl_std": 9.688056535997958,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 40.0}": {
+        "total_pnl": 58.738025188446045,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 2.254969146208998,
+        "daily_pnl_std": 13.293776754498415,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -3, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 98.24711269140244,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7717340191888065,
+        "daily_pnl_std": 12.340734608104732,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -2.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 99.07070142030716,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.8033518198705174,
+        "daily_pnl_std": 15.621238477183734,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 93.27059811353683,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.580684238527239,
+        "daily_pnl_std": 15.77241472708839,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -1.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 91.96660155057907,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.530623447297051,
+        "daily_pnl_std": 15.938968387994992,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": -0.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 0.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 0.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 1.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 2.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.0, \"stop_echappee_threshold\": 2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 97.6473051905632,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 3.7487072421782086,
+        "daily_pnl_std": 15.674699626152584,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -3, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -1.5, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -1.0, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": -0.5, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.0, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 0.5, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 1.0, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 1.5, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 108.81060153245926,
+        "total_invested_capital": 2604.8261142373085,
+        "total_roi": 4.177269297851727,
+        "daily_pnl_std": 15.2031111024304,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 2.0, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 111.00051426887512,
+        "total_invested_capital": 2604.6226982474327,
+        "total_roi": 4.26167346017386,
+        "daily_pnl_std": 15.301659804465132,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -2.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 50.0}": {
+        "total_pnl": 26.809695780277252,
+        "total_invested_capital": 2383.741407930851,
+        "total_roi": 1.1246897709239678,
+        "daily_pnl_std": 11.202180182357537,
+        "positive_or_zero_pnl_days": 10,
+        "negative_pnl_days": 12
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 0.07499539852142334,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 0.0037276016621617353,
+        "daily_pnl_std": 3.0503004656287507,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -1.1182113885879517,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": -0.05558003174765343,
+        "daily_pnl_std": 0.7955483929434759,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -1.1182113885879517,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": -0.05558003174765343,
+        "daily_pnl_std": 0.7955483929434759,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 0.121787428855896,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 0.006053371689250488,
+        "daily_pnl_std": 0.7525013710363149,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -3.068214535713196,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": -0.15250377794747186,
+        "daily_pnl_std": 2.3990392029967462,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 5.8249934911727905,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 0.28952783567880275,
+        "daily_pnl_std": 4.06042856228456,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 18.8749977350235,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 0.9381705320263594,
+        "daily_pnl_std": 5.474908952220855,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 23.324994683265686,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 1.1593549826449359,
+        "daily_pnl_std": 6.324046023732809,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 21.477200627326965,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 1.0675114785093833,
+        "daily_pnl_std": 7.697012571391831,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.247194409370422,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 1.4537143963945092,
+        "daily_pnl_std": 8.600562254652942,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 160.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.882301568984985,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": -0.2923762995888519,
+        "daily_pnl_std": 4.807575560662919,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 170.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.882301568984985,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": -0.2923762995888519,
+        "daily_pnl_std": 4.807575560662919,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 180.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.882301568984985,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": -0.2923762995888519,
+        "daily_pnl_std": 4.807575560662919,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 50.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 190.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": -5.882301568984985,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": -0.2923762995888519,
+        "daily_pnl_std": 4.807575560662919,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 0.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.275792837142944,
+        "total_invested_capital": 2011.9411201998591,
+        "total_roi": 1.4551018686985626,
+        "daily_pnl_std": 8.600337686140511,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 5.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.275792837142944,
+        "total_invested_capital": 2011.9411201998591,
+        "total_roi": 1.4551018686985626,
+        "daily_pnl_std": 8.600337686140511,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 10.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.275792837142944,
+        "total_invested_capital": 2011.9411201998591,
+        "total_roi": 1.4551018686985626,
+        "daily_pnl_std": 8.600337686140511,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 15.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.275792837142944,
+        "total_invested_capital": 2011.9411201998591,
+        "total_roi": 1.4551018686985626,
+        "daily_pnl_std": 8.600337686140511,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 20.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.275792837142944,
+        "total_invested_capital": 2011.9411201998591,
+        "total_roi": 1.4551018686985626,
+        "daily_pnl_std": 8.600337686140511,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 25.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.275792837142944,
+        "total_invested_capital": 2011.9411201998591,
+        "total_roi": 1.4551018686985626,
+        "daily_pnl_std": 8.600337686140511,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 30.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.247194409370422,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 1.4537143963945092,
+        "daily_pnl_std": 8.600562254652942,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 35.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.247194409370422,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 1.4537143963945092,
+        "daily_pnl_std": 8.600562254652942,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 40.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.247194409370422,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 1.4537143963945092,
+        "daily_pnl_std": 8.600562254652942,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.247194409370422,
+        "total_invested_capital": 2011.8941163346171,
+        "total_roi": 1.4537143963945092,
+        "daily_pnl_std": 8.600562254652942,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 55.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 26.44719111919403,
+        "total_invested_capital": 1911.7671166062355,
+        "total_roi": 1.383389791019265,
+        "daily_pnl_std": 8.642424838792351,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 60.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.45819067955017,
+        "total_invested_capital": 1812.3086146712303,
+        "total_roi": 1.6254511202494153,
+        "daily_pnl_std": 8.59897159268467,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 65.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 26.388983845710754,
+        "total_invested_capital": 1805.515819966793,
+        "total_roi": 1.461575886175071,
+        "daily_pnl_std": 8.63518626152903,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.90708839893341,
+        "total_invested_capital": 1714.82811743021,
+        "total_roi": 1.7440283428377228,
+        "daily_pnl_std": 8.596533423652922,
+        "positive_or_zero_pnl_days": 18,
+        "negative_pnl_days": 4
+    },
+    "{\"min_escape_time\": 3600, \"min_market_pnl\": 75.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 29.003190279006958,
+        "total_invested_capital": 1715.3286132216454,
+        "total_roi": 1.6908241403689173,
+        "daily_pnl_std": 8.602204322488479,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 0, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 17.233570516109467,
+        "total_invested_capital": 4833.472197592258,
+        "total_roi": 0.35654638759884005,
+        "daily_pnl_std": 20.803502234075854,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 300, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 35.081175707280636,
+        "total_invested_capital": 4141.858603201807,
+        "total_roi": 0.8469911474081134,
+        "daily_pnl_std": 23.926709575513748,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 600, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 47.74198781698942,
+        "total_invested_capital": 3761.9795069918036,
+        "total_roi": 1.2690656003909337,
+        "daily_pnl_std": 20.693493380139778,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 900, \"min_market_pnl\": 70.0, \"start_echappee_threshold\": 2.5, \"stop_echappee_threshold\": -3.0, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 30.0}": {
+        "total_pnl": 40.675102442502975,
+        "total_invested_capital": 3469.0693050920963,
+        "total_roi": 1.172507634332867,
+        "daily_pnl_std": 21.26348620362466,
+        "positive_or_zero_pnl_days": 14,
+        "negative_pnl_days": 8
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 120.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 57.98940163850784,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 1.9380050335891346,
+        "daily_pnl_std": 19.70865189200383,
+        "positive_or_zero_pnl_days": 13,
+        "negative_pnl_days": 9
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 4.4904338121414185,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.150070238440778,
+        "daily_pnl_std": 7.197773883386344,
+        "positive_or_zero_pnl_days": 17,
+        "negative_pnl_days": 5
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 70.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -1.5375922918319702,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -0.05138631399844339,
+        "daily_pnl_std": 9.32912713143796,
+        "positive_or_zero_pnl_days": 16,
+        "negative_pnl_days": 6
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 80.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 3.9637166261672974,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.13246735707188487,
+        "daily_pnl_std": 9.789360239297531,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 90.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 5.908932149410248,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.19747643405738008,
+        "daily_pnl_std": 11.29530411005522,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 100.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 1.6561203598976135,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 0.05534752046104422,
+        "daily_pnl_std": 14.550610298474076,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 110.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": 50.43069487810135,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": 1.685393153914824,
+        "daily_pnl_std": 16.471549770118283,
+        "positive_or_zero_pnl_days": 15,
+        "negative_pnl_days": 7
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 130.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -22.663594901561737,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -0.7574170410009058,
+        "daily_pnl_std": 25.978834611831445,
+        "positive_or_zero_pnl_days": 12,
+        "negative_pnl_days": 10
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 140.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -70.16939491033554,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -2.3450602471785267,
+        "daily_pnl_std": 25.203566333196505,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 2100, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -2.5, \"stop_echappee_threshold\": 1.5, \"take_profit_market_pnl\": 150.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 60.0}": {
+        "total_pnl": -68.96460741758347,
+        "total_invested_capital": 2992.2214149832726,
+        "total_roi": -2.30479626515102,
+        "daily_pnl_std": 26.82151473995451,
+        "positive_or_zero_pnl_days": 11,
+        "negative_pnl_days": 11
+    },
+    "{\"min_escape_time\": 0.0, \"min_market_pnl\": 45.0, \"start_echappee_threshold\": -3, \"stop_echappee_threshold\": -3, \"take_profit_market_pnl\": 60.0, \"top_n_threshold\": 1, \"trade_interval_minutes\": 150000, \"trade_value_eur\": 100.0, \"trail_stop_market_pnl\": 20}": {
+        "total_pnl": -9.598948121070862,
+        "total_invested_capital": 2044.2173060178757,
+        "total_roi": -0.46956593571598126,
+        "daily_pnl_std": 7.6618252774781,
+        "positive_or_zero_pnl_days": 3,
+        "negative_pnl_days": 3
+    }
+}

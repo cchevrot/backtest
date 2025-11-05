@@ -69,7 +69,7 @@ from config_manager import ConfigManager
 from simulation_runner import SimulationRunner
 from optimizer import Optimizer
 from memoire_config import SimulationMemoire
-
+import glob
 
 # Initialiser colorama pour les couleurs dans la console
 # Permet d'afficher du texte coloré dans le terminal Windows
@@ -149,37 +149,38 @@ if __name__ == "__main__":
 
     # Liste des fichiers de données de prix compressés (format LZ4)
     # Chaque fichier contient les données de prix pour une journée spécifique
-    data_files = [
-        # Données de juin 2025
-        r"../data/06/17/prices_data.lz4",
-        r"../data/06/18/prices_data.lz4",
-        r"../data/06/20/prices_data.lz4",
-        r"../data/06/23/prices_data.lz4",
-        r"../data/06/24/prices_data.lz4",
-        r"../data/06/25/prices_data.lz4",
-        r"../data/06/26/prices_data.lz4",
-        r"../data/06/27/prices_data.lz4",
-        r"../data/06/30/prices_data.lz4",
+    data_files = glob.glob('data/**/*.lz4', recursive=True)
+    # data_files = [
+    #     # Données de juin 2025
+    #     r"../data/06/17/prices_data.lz4",
+    #     r"../data/06/18/prices_data.lz4",
+    #     r"../data/06/20/prices_data.lz4",
+    #     r"../data/06/23/prices_data.lz4",
+    #     r"../data/06/24/prices_data.lz4",
+    #     r"../data/06/25/prices_data.lz4",
+    #     r"../data/06/26/prices_data.lz4",
+    #     r"../data/06/27/prices_data.lz4",
+    #     r"../data/06/30/prices_data.lz4",
 
-        # Données de juillet 2025
-        r"../data/07/02/prices_data.lz4",
-        r"../data/07/03/prices_data.lz4",
-        r"../data/07/07/prices_data.lz4",
-        r"../data/07/08/prices_data.lz4",
-        r"../data/07/09/prices_data.lz4",
-        r"../data/07/10/prices_data.lz4",
-        r"../data/07/11/prices_data.lz4",
-        r"../data/07/14/prices_data.lz4",
-        r"../data/07/15/prices_data.lz4",
-        r"../data/07/16/prices_data.lz4",
-        r"../data/07/17/prices_data_2025-07-17.lz4",
-        r"../data/07/18/prices_data_2025-07-18.lz4",
-        r"../data/07/21/prices_data.lz4",
-        r"../data/07/30/prices_data.lz4",
+    #     # Données de juillet 2025
+    #     r"../data/07/02/prices_data.lz4",
+    #     r"../data/07/03/prices_data.lz4",
+    #     r"../data/07/07/prices_data.lz4",
+    #     r"../data/07/08/prices_data.lz4",
+    #     r"../data/07/09/prices_data.lz4",
+    #     r"../data/07/10/prices_data.lz4",
+    #     r"../data/07/11/prices_data.lz4",
+    #     r"../data/07/14/prices_data.lz4",
+    #     r"../data/07/15/prices_data.lz4",
+    #     r"../data/07/16/prices_data.lz4",
+    #     r"../data/07/17/prices_data_2025-07-17.lz4",
+    #     r"../data/07/18/prices_data_2025-07-18.lz4",
+    #     r"../data/07/21/prices_data.lz4",
+    #     r"../data/07/30/prices_data.lz4",
 
-        # Données d'août 2025
-        r"../data/08/01/prices_data.lz4",
-    ]
+    #     # Données d'août 2025
+    #     r"../data/08/01/prices_data.lz4",
+    # ]
 
     # Initialisation des composants principaux du système
     config_manager = ConfigManager()  # Gestionnaire de configuration des paramètres

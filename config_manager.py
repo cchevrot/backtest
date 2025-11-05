@@ -164,53 +164,71 @@ class ConfigManager:
     def __init__(self, config_file="best_config.json"):
         self.config_file = config_file
         self.default_param_configs = {
-            'take_profit_market_pnl': {
-                #'initial_value': 50.0, 'min_value': 50.0, 'max_value': 200.0, 'step': 5
-                'initial_value': 84.0, 'min_value': 84.0, 'max_value': 84.0, 'step': 4
-            },
-            'min_market_pnl': {
-                #'initial_value': 10.0, 'min_value': 10.0, 'max_value': 50.0, 'step': 5.0
-                'initial_value': 20.0, 'min_value':20.0, 'max_value': 50.0, 'step': 1.0
-            },
-            'min_escape_time': {
-                'initial_value': 60.0, 'min_value': 60, 'max_value': 60.0, 'step': 60
-            },
-            'trail_stop_market_pnl': {
-                'initial_value': 30, 'min_value': 30.0, 'max_value': 50.0, 'step': 1
-            },
-            'stop_echappee_threshold': {
-                'initial_value': 1, 'min_value': 1, 'max_value': 1, 'step': 0.5
-            },
-            'start_echappee_threshold': {
-                'initial_value': 1.5, 'min_value': 1.5, 'max_value': 1.5, 'step': 0.5
-            },
-            'top_n_threshold': {
-                'initial_value': 1, 'min_value': 1, 'max_value': 1, 'step': 1
-            },
-            'trade_interval_minutes': {
-                'initial_value': 150000, 'min_value': 150000, 'max_value': 150000, 'step': 50
-            },
-            'trade_value_eur': {
-                'initial_value': 100.0, 'min_value': 100.0, 'max_value': 100.0, 'step': 1.0
-            },
-            'max_pnl_timeout_minutes': {
-                'initial_value': 6000.0, 'min_value': 6000.0, 'max_value': 6000.0, 'step': 6000.0
-            },
-            'max_trades_per_day': {
-                'initial_value': 3, 'min_value': 3, 'max_value': 3, 'step': 2
-            },
-            'trade_cutoff_hour': {
-                'initial_value': "12:30", 
-                'min_value': "12:30", 
-                'max_value': "12:30", 
-                'step': 30  # Pas de 1 heure, en minutes
-            },
             'trade_start_hour': {  # Nouveau paramètre
                 'initial_value': "09:30", 
                 'min_value': "09:30", 
-                'max_value': "09:30", 
+                'max_value': "18:00", 
                 'step': 30  # Pas de 1 heure, en minutes
-            }
+            },
+            'trade_cutoff_hour': {
+                'initial_value': "13:45", # "13:45", 
+                'min_value': "09:00", 
+                'max_value': "18:00", 
+                'step': 30  # Pas de 1 heure, en minutes
+            },
+
+
+            'min_market_pnl': {
+               
+                'initial_value': 43.0,
+                'min_value':0.0, 'max_value': 200.0, 'step': 1.0
+            },
+            'take_profit_market_pnl': {
+                'initial_value': 70.0,
+                'min_value': 0.0, 'max_value': 200.0, 'step': 4
+            },
+            'trail_stop_market_pnl': {
+                'initial_value': 1000,
+                'min_value': 0.0, 'max_value': 200.0, 'step': 5
+            },
+  
+            'min_escape_time': {
+                'initial_value':83.0,
+                'min_value': 0, 'max_value': 200.0, 'step': 60
+            },
+            'max_trades_per_day': {
+                'initial_value': 10,
+                'min_value': 0, 'max_value': 200, 'step': 2
+            },
+            'trade_value_eur': {
+                'initial_value': 100.0,
+                'min_value': 100.0, 'max_value': 100.0, 'step': 1.0
+            },
+            'top_n_threshold': {
+                'initial_value': 1,
+                'min_value': 0, 'max_value': 200, 'step': 1
+            },
+            'stop_echappee_threshold': {
+                'initial_value': 1,
+                'min_value': 0, 'max_value': 200, 'step': 0.5
+            },
+            'start_echappee_threshold': {
+                'initial_value': 1.5,
+                'min_value': 0, 'max_value': 200, 'step': 0.5
+            },
+
+            'trade_interval_minutes': {
+                'initial_value': 150000,
+                'min_value': 150000, 'max_value': 150000, 'step': 50
+            },
+
+            'max_pnl_timeout_minutes': {
+                'initial_value': 6000.0,
+                'min_value': 6000.0, 'max_value': 6000.0, 'step': 6000.0
+            },
+
+
+
         }
 
     def load_best_config(self):
