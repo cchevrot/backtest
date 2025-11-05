@@ -99,74 +99,20 @@ import json
 import pandas as pd
 import numpy as np
 from colorama import Fore, Style
-from price_logger import PriceLogger
-from sorted_pnl_table import SortedPnlTable
-from algo_echappee import AlgoEchappee
 from multiprocessing import Pool
+from single_file_simulator import SingleFileSimulator
+
 
 class SimulationRunner:
     """Exécute les simulations pour une liste de fichiers de données avec des paramètres donnés."""
     
-    def __init__(self, data_files, memoire):
+    def __init__(self, data_files, parallel=True):
         self.data_files = data_files
-        self.memoire = memoire
+        self.parallel = parallel
 
     def run_single_file_simulation(self, data_file, params):
         """Exécute une simulation pour un seul fichier de données avec les paramètres donnés."""
-        if not os.path.exists(data_file):
-            print(f"{Fore.RED}Erreur: Fichier {data_file} n'existe pas")
-            return {
-                'file_pnl': 0.0,
-                'file_invested_capital': 0.0,
-                'num_traded': 0,
-                'roi': 0.0
-            }
-
-        logger = PriceLogger(data_file, flush_interval=10)
-        table = SortedPnlTable()
-        algo = AlgoEchappee(
-            take_profit_market_pnl=params['take_profit_market_pnl'],
-            min_escape_time=params['min_escape_time'],
-            trail_stop_market_pnl=params['trail_stop_market_pnl'],
-            stop_echappee_threshold=params['stop_echappee_threshold'],
-            start_echappee_threshold=params['start_echappee_threshold'],
-            min_market_pnl=params['min_market_pnl'],
-            top_n_threshold=params['top_n_threshold'],
-            trade_interval_minutes=params['trade_interval_minutes'],
-            trade_value_eur=params['trade_value_eur'],
-            max_pnl_timeout_minutes=params.get('max_pnl_timeout_minutes', 60.0),
-            max_trades_per_day=params.get('max_trades_per_day', 3),
-            trade_cutoff_hour=params.get('trade_cutoff_hour', "14:00"),
-            trade_start_hour=params.get('trade_start_hour', "09:30")
-        )
-        timestamp = 0.0
-
-        for timestamp, ticker, price in logger.read_all():
-            table.update_ticker(ticker, price, timestamp)
-            algo.portfolio.refresh_prices(table)
-            if table.has_been_resorted():
-                algo.main(table, timestamp)
-        algo.portfolio.close_all(table, timestamp)
-        
-        file_pnl = algo.portfolio.total_pnl
-        traded_tickers = set(trade['ticker'] for trade in algo.portfolio.trades if trade['status'] == 'closed')
-        num_traded = len(traded_tickers)
-        file_invested_capital = sum(trade['invested_amount'] for trade in algo.portfolio.trades if trade['status'] == 'closed')
-        roi = (file_pnl / file_invested_capital * 100) if file_invested_capital != 0 else float('inf')
-
-        file_pnl_color = Fore.GREEN if file_pnl >= 0 else Fore.RED
-        print(f"\n{Fore.CYAN}{Style.BRIGHT}Résultats pour le fichier: {data_file}")
-        print(f"{Fore.CYAN}PnL global: {file_pnl_color}${file_pnl:.2f}{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}Nombre d'actions tradées: {num_traded}")
-        print(f"{Fore.CYAN}Capital investi: ${file_invested_capital:.2f}")
-        print(f"{Fore.CYAN}ROI (PnL/Capital Investi): {roi:.2f}%" if file_invested_capital != 0 else f"{Fore.CYAN}ROI (PnL/Capital Investi): N/A")
-
-        return {
-            'file_pnl': file_pnl,
-            'file_invested_capital': file_invested_capital,
-            'num_traded': num_traded,
-            'roi': roi
-        }
+        return SingleFileSimulator.run(data_file, params)
 
     def run_simulation(self, params):
         """Exécute une simulation avec les paramètres donnés et retourne les métriques."""
@@ -176,26 +122,52 @@ class SimulationRunner:
         positive_or_zero_pnl_days = 0
         negative_pnl_days = 0
 
-        # Créer un pool de processus
-        with Pool() as pool:
-            # Préparer les arguments pour chaque fichier
-            tasks = [(data_file, params) for data_file in self.data_files]
-            # Exécuter les simulations en parallèle
-            results = pool.starmap(self.run_single_file_simulation, tasks)
-
-        for result in results:
-            file_pnl = result['file_pnl']
-            total_pnl += file_pnl
-            daily_pnls.append(file_pnl)
-            if file_pnl >= 0:
-                positive_or_zero_pnl_days += 1
-            else:
-                negative_pnl_days += 1
-            total_invested_capital += result['file_invested_capital']
+        if self.parallel:
+            # Exécution parallèle avec multiprocessing
+            with Pool() as pool:
+                # Préparer les arguments pour chaque fichier
+                tasks = [(data_file, params) for data_file in self.data_files]
+                # Exécuter les simulations en parallèle
+                results = pool.starmap(SingleFileSimulator.run, tasks)
+            
+            # Agréger les résultats en parallèle (affichage à la fin uniquement)
+            for result in results:
+                file_pnl = result['file_pnl']
+                total_pnl += file_pnl
+                daily_pnls.append(file_pnl)
+                if file_pnl >= 0:
+                    positive_or_zero_pnl_days += 1
+                else:
+                    negative_pnl_days += 1
+                total_invested_capital += result['file_invested_capital']
+        else:
+            # Exécution séquentielle avec affichage des métriques après chaque fichier
+            for data_file in self.data_files:
+                result = SingleFileSimulator.run(data_file, params)
+                
+                file_pnl = result['file_pnl']
+                total_pnl += file_pnl
+                daily_pnls.append(file_pnl)
+                if file_pnl >= 0:
+                    positive_or_zero_pnl_days += 1
+                else:
+                    negative_pnl_days += 1
+                total_invested_capital += result['file_invested_capital']
+                
+                # Afficher les métriques cumulées après chaque fichier
+                current_total_roi = (total_pnl / total_invested_capital * 100) if total_invested_capital != 0 else float('inf')
+                current_daily_pnl_std = np.std(daily_pnls) if len(daily_pnls) > 1 else 0.0
+                
+                print(f"{Fore.YELLOW}  Métriques cumulées :")
+                print(f"{Fore.YELLOW}    Total PnL: {Fore.GREEN if total_pnl >= 0 else Fore.RED}${total_pnl:.2f}{Style.RESET_ALL}")
+                print(f"{Fore.YELLOW}    Total Capital Investi: ${total_invested_capital:.2f}")
+                print(f"{Fore.YELLOW}    Total ROI: {current_total_roi:.2f}%")
+                print(f"{Fore.YELLOW}    Daily PnL Std: ${current_daily_pnl_std:.2f}")
+                print(f"{Fore.YELLOW}    Jours positifs/nuls: {positive_or_zero_pnl_days}")
+                print(f"{Fore.YELLOW}    Jours négatifs: {negative_pnl_days}\n")
 
         total_roi = (total_pnl / total_invested_capital * 100) if total_invested_capital != 0 else float('inf')
         daily_pnl_std = np.std(daily_pnls) if len(daily_pnls) > 1 else 0.0
-
         total_pnl_color = Fore.GREEN if total_pnl >= 0 else Fore.RED
         print(f"\n{Fore.CYAN}{Style.BRIGHT}PnL global cumulé pour l'itération: {total_pnl_color}${total_pnl:.2f}{Style.RESET_ALL}")
         print(f"{Fore.CYAN}Capital investi total: ${total_invested_capital:.2f}")
@@ -215,13 +187,6 @@ class SimulationRunner:
 
     def run_simulation_display(self, params, iteration):
         """Affiche les paramètres et le PnL sous forme de tableau clair."""
-        key = json.dumps(params, sort_keys=True)
-        
-        if self.memoire.has_been_tested(params):
-            metrics = self.memoire.get_pnl(params)
-            print(f"{Fore.MAGENTA}Configuration déjà testée. Métriques récupérées depuis la mémoire: total_pnl=${metrics['total_pnl']:.2f}, total_roi={metrics['total_roi']:.2f}%")
-            return metrics['total_pnl']
-
         title = f"Configuration Itération {iteration}"
         print(f"\n{Fore.CYAN}{Style.BRIGHT}┌{'─' * 50}┐")
         print(f"{Fore.CYAN}{Style.BRIGHT}│ {title:^48} │")
@@ -244,59 +209,46 @@ class SimulationRunner:
         
         print(f"{Fore.CYAN}{Style.BRIGHT}└{'─' * 50}┘")
 
-        # Écriture séquentielle dans memoire_config.json
-        self.memoire.add_result(params, metrics)
         return metrics['total_pnl']
 
 
 def main():
-    """Point d'entrée principal pour tester SimulationRunner en ligne de commande."""
-    import argparse
+    """Point d'entrée pour tester SimulationRunner."""
     import glob
-    from memoire_config import SimulationMemoire
     
-    parser = argparse.ArgumentParser(description='Exécuter une simulation de trading avec AlgoEchappee')
-    parser.add_argument('--data-dir', type=str, default='../data', 
-                        help='Répertoire contenant les fichiers de données (défaut: ../data)')
-    parser.add_argument('--data-pattern', type=str, default='**/*.lz4',
-                        help='Pattern pour trouver les fichiers de données (défaut: **/*.lz4)')
-    parser.add_argument('--memoire', type=str, default='memoire_config.json',
-                        help='Fichier de cache des simulations (défaut: memoire_config.json)')
-    args = parser.parse_args()
-    
-    data_files = glob.glob(os.path.join(args.data_dir, args.data_pattern), recursive=True)
+    #data_files = glob.glob('../data/prices_data/**/*.lz4', recursive=True)
+    data_files = glob.glob('data/**/*.lz4', recursive=True)
     
     if not data_files:
-        print(f"{Fore.RED}Aucun fichier de données trouvé dans {args.data_dir} avec le pattern {args.data_pattern}")
-        print(f"{Fore.YELLOW}Veuillez vérifier le chemin et le pattern.")
+        print(f"{Fore.RED}Aucun fichier de données trouvé dans ../data")
+        print(f"{Fore.YELLOW}Veuillez vérifier que des fichiers .lz4 existent dans le répertoire ../data")
         return
     
     print(f"{Fore.CYAN}Fichiers de données trouvés: {len(data_files)}")
-    for f in data_files[:5]:
+    for f in data_files[:3]:
         print(f"{Fore.CYAN}  - {f}")
-    if len(data_files) > 5:
-        print(f"{Fore.CYAN}  ... et {len(data_files) - 5} autres")
+    if len(data_files) > 3:
+        print(f"{Fore.CYAN}  ... et {len(data_files) - 3} autres")
     
-    memoire = SimulationMemoire(args.memoire)
-    runner = SimulationRunner(data_files, memoire)
+    runner = SimulationRunner(data_files, parallel=False)  # Sans parallélisme par défaut
     
     test_params = {
-        'take_profit_market_pnl': 0.015,
-        'min_escape_time': 120.0,
-        'trail_stop_market_pnl': 0.008,
-        'stop_echappee_threshold': 0.012,
-        'start_echappee_threshold': 0.010,
-        'min_market_pnl': 0.005,
-        'top_n_threshold': 10,
-        'trade_interval_minutes': 5.0,
-        'trade_value_eur': 1000.0,
-        'max_pnl_timeout_minutes': 60.0,
+        'take_profit_market_pnl': 84,
+        'min_escape_time': 60.0,
+        'trail_stop_market_pnl': 50, #40,
+        'stop_echappee_threshold': 1,
+        'start_echappee_threshold': 1.5,
+        'min_market_pnl': 36, #38,
+        'top_n_threshold': 1,
+        'trade_interval_minutes': 150000,
+        'trade_value_eur': 100.0,
+        'max_pnl_timeout_minutes': 6000.0,
         'max_trades_per_day': 3,
-        'trade_cutoff_hour': "14:00",
+        'trade_cutoff_hour': "12:30",
         'trade_start_hour': "09:30"
     }
     
-    print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Simulation de test ==={Style.RESET_ALL}")
+    print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Simulation multi-fichiers ==={Style.RESET_ALL}")
     total_pnl = runner.run_simulation_display(test_params, iteration=1)
     
     print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Résultat final ==={Style.RESET_ALL}")
@@ -305,3 +257,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

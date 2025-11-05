@@ -7,8 +7,6 @@ __pycache__/
 # Data files
 *.lz4
 *.csv
-*.json
-!best_config.json
 
 # Reports
 *.html
