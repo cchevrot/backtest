@@ -46,7 +46,22 @@ class SingleFileSimulator:
     
     @staticmethod
     def run(data_file, params):
-        """Exécute une simulation pour un seul fichier de données avec les paramètres donnés."""
+        """
+        ★★★ NIVEAU 3 : SIMULATION SUR UN SEUL FICHIER ★★★
+        Exécute la stratégie sur UN SEUL fichier .lz4 (une journée de trading)
+        
+        Hiérarchie des appels :
+        ParamOptimizer._simulate_strategy()      [Niveau 1 - Optimisation]
+            └─> SimulationRunner.run_simulation() [Niveau 2 - TOUS les fichiers]
+                  └─> SingleFileSimulator.run()   [Niveau 3 - UN fichier] ★ VOUS ÊTES ICI
+        
+        Args:
+            data_file: Chemin vers le fichier .lz4 à traiter
+            params: Dictionnaire des paramètres de la stratégie
+            
+        Returns:
+            Dictionnaire avec métriques du fichier (file_pnl, roi, num_traded, etc.)
+        """
         if not os.path.exists(data_file):
             print(f"{Fore.RED}Erreur: Fichier {data_file} n'existe pas")
             return {

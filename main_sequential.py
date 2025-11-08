@@ -19,7 +19,7 @@ def main_sequential():
 
     # Initialisation des composants
     config_manager = ConfigManager()
-    simulation_runner = SimulationRunner(data_files, parallel=True)
+    simulation_runner = SimulationRunner(data_files, parallel=False)
 
 
     #best_params = config_manager.get_default_params() # config_manager.load_best_config()

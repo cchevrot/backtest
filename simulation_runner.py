@@ -115,7 +115,22 @@ class SimulationRunner:
         return SingleFileSimulator.run(data_file, params)
 
     def run_simulation(self, params):
-        """Exécute une simulation avec les paramètres donnés et retourne les métriques."""
+        """
+        ★★★ NIVEAU 2 : SIMULATION SUR TOUS LES FICHIERS ★★★
+        Exécute la stratégie avec les paramètres donnés sur TOUS les fichiers .lz4
+        et agrège les résultats.
+        
+        Hiérarchie des appels :
+        ParamOptimizer._simulate_strategy()      [Niveau 1 - Optimisation]
+            └─> SimulationRunner.run_simulation() [Niveau 2 - TOUS les fichiers] ★ VOUS ÊTES ICI
+                  └─> SingleFileSimulator.run()   [Niveau 3 - UN fichier]
+        
+        Args:
+            params: Dictionnaire des paramètres de la stratégie
+            
+        Returns:
+            Dictionnaire de métriques agrégées (total_pnl, total_roi, etc.)
+        """
         total_pnl = 0.0
         total_invested_capital = 0.0
         daily_pnls = []
@@ -123,11 +138,13 @@ class SimulationRunner:
         negative_pnl_days = 0
 
         if self.parallel:
-            # Exécution parallèle avec multiprocessing
+            # ═══════════════════════════════════════════════════════════
+            # MODE PARALLÈLE : exécute TOUS les fichiers en même temps
+            # ═══════════════════════════════════════════════════════════
             with Pool() as pool:
                 # Préparer les arguments pour chaque fichier
                 tasks = [(data_file, params) for data_file in self.data_files]
-                # Exécuter les simulations en parallèle
+                # Appel au niveau 3 : SingleFileSimulator.run() pour CHAQUE fichier
                 results = pool.starmap(SingleFileSimulator.run, tasks)
             
             # Agréger les résultats en parallèle (affichage à la fin uniquement)
@@ -141,8 +158,12 @@ class SimulationRunner:
                     negative_pnl_days += 1
                 total_invested_capital += result['file_invested_capital']
         else:
-            # Exécution séquentielle avec affichage des métriques après chaque fichier
+            # ═══════════════════════════════════════════════════════════
+            # MODE SÉQUENTIEL : exécute les fichiers un par un
+            # Affiche les métriques cumulées après CHAQUE fichier
+            # ═══════════════════════════════════════════════════════════
             for data_file in self.data_files:
+                # Appel au niveau 3 : SingleFileSimulator.run() pour UN fichier
                 result = SingleFileSimulator.run(data_file, params)
                 
                 file_pnl = result['file_pnl']
@@ -217,7 +238,7 @@ def main():
     import glob
     
     #data_files = glob.glob('../data/prices_data/**/*.lz4', recursive=True)
-    data_files = glob.glob('data/**/*.lz4', recursive=True)
+    data_files = glob.glob('../data/prices_data/dataset2/**/*.lz4', recursive=True)
     
     if not data_files:
         print(f"{Fore.RED}Aucun fichier de données trouvé dans ../data")
