@@ -11,7 +11,7 @@ import os
 import glob
 from datetime import datetime, timedelta
 from itertools import product, islice
-from simulation_runner import SimulationRunner
+from multi_file_simulator import MultiFileSimulator
 
 
 class ParamOptimizer:
@@ -39,10 +39,10 @@ class ParamOptimizer:
         self.results = []
         self.param_order = []
         
-        # Configuration du runner de simulation
+        # Configuration du multi-file simulator
         if data_files is None:
             data_files = glob.glob('../data/prices_data/dataset3/**/*.lz4', recursive=True)
-        self.simulation_runner = SimulationRunner(data_files, parallel=parallel)
+        self.multi_file_simulator = MultiFileSimulator(data_files, parallel=parallel)
 
     def _log(self, msg: str):
         """Enregistre un message dans le log et l'affiche."""
@@ -73,15 +73,15 @@ class ParamOptimizer:
         self.param_order = list(self.params.keys())
         self._log(f"Paramètres chargés ({len(self.params)} paramètres)")
 
-    def _simulate_strategy(self, param_values: dict) -> float:
+    def _test_params_on_all_files(self, param_values: dict) -> float:
         """
         ★★★ NIVEAU 1 : OPTIMISATION MULTI-PARAMÈTRES ★★★
         Teste UNE combinaison de paramètres sur TOUS les fichiers .lz4
         
         Hiérarchie des appels :
-        ParamOptimizer._simulate_strategy() 
-            └─> SimulationRunner.run_simulation()  [TOUS les fichiers]
-                  └─> SingleFileSimulator.run()    [UN fichier]
+        ParamOptimizer._test_params_on_all_files()      [Niveau 1 - Optimisation] ★ VOUS ÊTES ICI
+            └─> MultiFileSimulator.run_all_files()       [Niveau 2 - TOUS les fichiers]
+                  └─> SingleFileSimulator.run_single_file() [Niveau 3 - UN fichier]
         
         Args:
             param_values: Dictionnaire des paramètres de la stratégie
@@ -90,7 +90,7 @@ class ParamOptimizer:
             PnL total agrégé de tous les fichiers
         """
         # Appel au niveau 2 : exécute la simulation sur TOUS les fichiers
-        metrics = self.simulation_runner.run_simulation(param_values)
+        metrics = self.multi_file_simulator.run_all_files(param_values)
         return metrics['total_pnl']
 
     def _generate_values(self, settings: dict, max_tests: int = 5) -> list:
@@ -230,7 +230,7 @@ class ParamOptimizer:
         combo_iterator = product(*param_values_list)
         for combo_index, combo in enumerate(islice(combo_iterator, max_total_tests), 1):
             param_dict = dict(zip(self.param_order, combo))
-            pnl = self._simulate_strategy(param_dict)
+            pnl = self._test_params_on_all_files(param_dict)
             
             # Enregistrer le résultat
             row = {"pnl": pnl, **param_dict}

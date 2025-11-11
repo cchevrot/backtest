@@ -5,7 +5,7 @@ SingleFileSimulator — Exécuteur de simulation sur un seul fichier de données
 SingleFileSimulator exécute un backtest de la stratégie AlgoEchappee sur un seul 
 fichier de données historiques et calcule les métriques de performance pour ce fichier.
 
-C'est l'unité de base d'exécution utilisée par SimulationRunner pour paralléliser 
+C'est l'unité de base d'exécution utilisée par MultiFileSimulator pour paralléliser 
 les tests sur plusieurs journées de trading.
 
 ==== RESPONSABILITÉS ====
@@ -30,7 +30,7 @@ les tests sur plusieurs journées de trading.
 - Portfolio : Gère les positions et calcule le PnL (via AlgoEchappee)
 
 ==== UTILISATION ====
-Cette classe est conçue pour être utilisée par multiprocessing.Pool dans SimulationRunner.
+Cette classe est conçue pour être utilisée par multiprocessing.Pool dans MultiFileSimulator.
 Elle est stateless (pas d'attributs d'instance) pour faciliter la sérialisation.
 """
 
@@ -42,18 +42,18 @@ from algo_echappee import AlgoEchappee
 
 
 class SingleFileSimulator:
-    """Exécute une simulation sur un seul fichier de données."""
+    """★★★ NIVEAU 3 ★★★ Exécute une simulation sur un seul fichier de données."""
     
     @staticmethod
-    def run(data_file, params):
+    def run_single_file(data_file, params):
         """
         ★★★ NIVEAU 3 : SIMULATION SUR UN SEUL FICHIER ★★★
         Exécute la stratégie sur UN SEUL fichier .lz4 (une journée de trading)
         
         Hiérarchie des appels :
-        ParamOptimizer._simulate_strategy()      [Niveau 1 - Optimisation]
-            └─> SimulationRunner.run_simulation() [Niveau 2 - TOUS les fichiers]
-                  └─> SingleFileSimulator.run()   [Niveau 3 - UN fichier] ★ VOUS ÊTES ICI
+        ParamOptimizer._test_params_on_all_files()      [Niveau 1 - Optimisation]
+            └─> MultiFileSimulator.run_all_files()       [Niveau 2 - TOUS les fichiers]
+                  └─> SingleFileSimulator.run_single_file() [Niveau 3 - UN fichier] ★ VOUS ÊTES ICI
         
         Args:
             data_file: Chemin vers le fichier .lz4 à traiter
@@ -157,7 +157,7 @@ def main():
     print(f"{Fore.GREEN}{Style.BRIGHT}=== Test SingleFileSimulator ==={Style.RESET_ALL}")
     print(f"{Fore.CYAN}Fichier testé: {data_files[0]}")
     
-    result = SingleFileSimulator.run(data_files[5], test_params)
+    result = SingleFileSimulator.run_single_file(data_files[0], test_params)
     
     print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Résumé ==={Style.RESET_ALL}")
     print(f"{Fore.CYAN}PnL: {Fore.GREEN if result['file_pnl'] >= 0 else Fore.RED}${result['file_pnl']:.2f}{Style.RESET_ALL}")

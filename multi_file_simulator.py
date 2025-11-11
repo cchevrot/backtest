@@ -1,9 +1,9 @@
 """
-SimulationRunner — Exécuteur de simulations pour le backtesting de stratégies de trading.
+MultiFileSimulator — Exécuteur de simulations multi-fichiers pour le backtesting.
 
 ==== RÔLE DE LA CLASSE ====
-SimulationRunner exécute les backtests de la stratégie AlgoEchappee sur plusieurs 
-fichiers de données historiques et calcule les métriques de performance.
+MultiFileSimulator (NIVEAU 2) exécute les backtests de la stratégie AlgoEchappee sur plusieurs 
+fichiers de données historiques et calcule les métriques de performance agrégées.
 
 C'est le moteur d'exécution qui transforme des paramètres de stratégie en résultats 
 mesurables (PnL, ROI, etc.).
@@ -103,27 +103,27 @@ from multiprocessing import Pool
 from single_file_simulator import SingleFileSimulator
 
 
-class SimulationRunner:
-    """Exécute les simulations pour une liste de fichiers de données avec des paramètres donnés."""
+class MultiFileSimulator:
+    """★★★ NIVEAU 2 ★★★ Exécute les simulations sur TOUS les fichiers de données."""
     
     def __init__(self, data_files, parallel=True):
         self.data_files = data_files
         self.parallel = parallel
 
-    def run_single_file_simulation(self, data_file, params):
-        """Exécute une simulation pour un seul fichier de données avec les paramètres donnés."""
-        return SingleFileSimulator.run(data_file, params)
+    def run_single_file(self, data_file, params):
+        """Délègue l'exécution à SingleFileSimulator (NIVEAU 3)."""
+        return SingleFileSimulator.run_single_file(data_file, params)
 
-    def run_simulation(self, params):
+    def run_all_files(self, params):
         """
         ★★★ NIVEAU 2 : SIMULATION SUR TOUS LES FICHIERS ★★★
         Exécute la stratégie avec les paramètres donnés sur TOUS les fichiers .lz4
         et agrège les résultats.
         
         Hiérarchie des appels :
-        ParamOptimizer._simulate_strategy()      [Niveau 1 - Optimisation]
-            └─> SimulationRunner.run_simulation() [Niveau 2 - TOUS les fichiers] ★ VOUS ÊTES ICI
-                  └─> SingleFileSimulator.run()   [Niveau 3 - UN fichier]
+        ParamOptimizer._test_params_on_all_files()      [Niveau 1 - Optimisation]
+            └─> MultiFileSimulator.run_all_files()       [Niveau 2 - TOUS les fichiers] ★ VOUS ÊTES ICI
+                  └─> SingleFileSimulator.run_single_file() [Niveau 3 - UN fichier]
         
         Args:
             params: Dictionnaire des paramètres de la stratégie
@@ -144,8 +144,8 @@ class SimulationRunner:
             with Pool() as pool:
                 # Préparer les arguments pour chaque fichier
                 tasks = [(data_file, params) for data_file in self.data_files]
-                # Appel au niveau 3 : SingleFileSimulator.run() pour CHAQUE fichier
-                results = pool.starmap(SingleFileSimulator.run, tasks)
+                # Appel au niveau 3 : SingleFileSimulator.run_single_file() pour CHAQUE fichier
+                results = pool.starmap(SingleFileSimulator.run_single_file, tasks)
             
             # Agréger les résultats en parallèle (affichage à la fin uniquement)
             for result in results:
@@ -163,8 +163,8 @@ class SimulationRunner:
             # Affiche les métriques cumulées après CHAQUE fichier
             # ═══════════════════════════════════════════════════════════
             for data_file in self.data_files:
-                # Appel au niveau 3 : SingleFileSimulator.run() pour UN fichier
-                result = SingleFileSimulator.run(data_file, params)
+                # Appel au niveau 3 : SingleFileSimulator.run_single_file() pour UN fichier
+                result = SingleFileSimulator.run_single_file(data_file, params)
                 
                 file_pnl = result['file_pnl']
                 total_pnl += file_pnl
@@ -206,7 +206,7 @@ class SimulationRunner:
             'negative_pnl_days': negative_pnl_days
         }
 
-    def run_simulation_display(self, params, iteration):
+    def run_all_files_display(self, params, iteration):
         """Affiche les paramètres et le PnL sous forme de tableau clair."""
         title = f"Configuration Itération {iteration}"
         print(f"\n{Fore.CYAN}{Style.BRIGHT}┌{'─' * 50}┐")
@@ -221,7 +221,7 @@ class SimulationRunner:
         df = pd.DataFrame(param_data, columns=['Paramètre', 'Valeur'])
         print(df.to_string(index=False, justify='left', col_space={'Paramètre': 30, 'Valeur': 10}))
 
-        metrics = self.run_simulation(params)
+        metrics = self.run_all_files(params)
 
         if metrics['total_pnl'] is not None:
             color = Fore.GREEN if metrics['total_pnl'] > 0 else Fore.RED
@@ -234,7 +234,7 @@ class SimulationRunner:
 
 
 def main():
-    """Point d'entrée pour tester SimulationRunner."""
+    """Point d'entrée pour tester MultiFileSimulator."""
     import glob
     
     #data_files = glob.glob('../data/prices_data/**/*.lz4', recursive=True)
@@ -251,7 +251,7 @@ def main():
     if len(data_files) > 3:
         print(f"{Fore.CYAN}  ... et {len(data_files) - 3} autres")
     
-    runner = SimulationRunner(data_files, parallel=False)  # Sans parallélisme par défaut
+    simulator = MultiFileSimulator(data_files, parallel=False)  # Sans parallélisme par défaut
     
     test_params = {
         'take_profit_market_pnl': 84,
@@ -270,7 +270,7 @@ def main():
     }
     
     print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Simulation multi-fichiers ==={Style.RESET_ALL}")
-    total_pnl = runner.run_simulation_display(test_params, iteration=1)
+    total_pnl = simulator.run_all_files_display(test_params, iteration=1)
     
     print(f"\n{Fore.GREEN}{Style.BRIGHT}=== Résultat final ==={Style.RESET_ALL}")
     print(f"{Fore.CYAN}PnL total: {Fore.GREEN if total_pnl >= 0 else Fore.RED}${total_pnl:.2f}{Style.RESET_ALL}")
