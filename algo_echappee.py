@@ -72,7 +72,7 @@ class AlgoEchappee:
                  start_echappee_threshold=0.78, min_market_pnl=15.0,
                  top_n_threshold=5, trade_interval_minutes=30, trade_value_eur=100.0,
                  max_pnl_timeout_minutes=60.0, max_trades_per_day=3,
-                 trade_cutoff_hour="14:00", trade_start_hour="09:30"):
+                 trade_cutoff_hour="14:00", trade_start_hour="09:30", verbose=True):
         self.portfolio = Portfolio()
         self.traded_tickers = set()
         self.take_profit_market_pnl = take_profit_market_pnl
@@ -88,6 +88,7 @@ class AlgoEchappee:
         self.max_trades_per_day = max_trades_per_day
         self.trade_cutoff_hour = trade_cutoff_hour
         self.trade_start_hour = trade_start_hour
+        self.verbose = verbose
         self.escape_start_times = {}
         self.top_n_start_times = {}
         self.last_trade_time = None
@@ -248,7 +249,8 @@ class AlgoEchappee:
                                 self.last_trade_time = timestamp
                                 current_date = self._get_date(timestamp)
                                 self.trades_today[current_date] = self.trades_today.get(current_date, 0) + 1
-                                print(f"Opened echappee trade on {ticker} for {quantity} shares at {fmt(timestamp)} (Trades today: {self.trades_today[current_date]}/{self.max_trades_per_day})")
+                                if self.verbose:
+                                    print(f"Opened echappee trade on {ticker} for {quantity} shares at {fmt(timestamp)} (Trades today: {self.trades_today[current_date]}/{self.max_trades_per_day})")
 
         # Periodic trade opening based on trade_interval_minutes
         interval_seconds = self.trade_interval_minutes * 60

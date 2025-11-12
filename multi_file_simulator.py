@@ -106,13 +106,14 @@ from single_file_simulator import SingleFileSimulator
 class MultiFileSimulator:
     """★★★ NIVEAU 2 ★★★ Exécute les simulations sur TOUS les fichiers de données."""
     
-    def __init__(self, data_files, parallel=True):
+    def __init__(self, data_files, parallel=True, verbose=True):
         self.data_files = data_files
         self.parallel = parallel
+        self.verbose = verbose
 
     def run_single_file(self, data_file, params):
         """Délègue l'exécution à SingleFileSimulator (NIVEAU 3)."""
-        return SingleFileSimulator.run_single_file(data_file, params)
+        return SingleFileSimulator.run_single_file(data_file, params, verbose=self.verbose)
 
     def run_all_files(self, params):
         """
@@ -131,6 +132,9 @@ class MultiFileSimulator:
         Returns:
             Dictionnaire de métriques agrégées (total_pnl, total_roi, etc.)
         """
+        from datetime import datetime
+        start_time = datetime.now()
+        
         total_pnl = 0.0
         total_invested_capital = 0.0
         daily_pnls = []
@@ -143,7 +147,7 @@ class MultiFileSimulator:
             # ═══════════════════════════════════════════════════════════
             with Pool() as pool:
                 # Préparer les arguments pour chaque fichier
-                tasks = [(data_file, params) for data_file in self.data_files]
+                tasks = [(data_file, params, self.verbose) for data_file in self.data_files]
                 # Appel au niveau 3 : SingleFileSimulator.run_single_file() pour CHAQUE fichier
                 results = pool.starmap(SingleFileSimulator.run_single_file, tasks)
             
@@ -164,7 +168,7 @@ class MultiFileSimulator:
             # ═══════════════════════════════════════════════════════════
             for data_file in self.data_files:
                 # Appel au niveau 3 : SingleFileSimulator.run_single_file() pour UN fichier
-                result = SingleFileSimulator.run_single_file(data_file, params)
+                result = SingleFileSimulator.run_single_file(data_file, params, verbose=self.verbose)
                 
                 file_pnl = result['file_pnl']
                 total_pnl += file_pnl
@@ -175,27 +179,49 @@ class MultiFileSimulator:
                     negative_pnl_days += 1
                 total_invested_capital += result['file_invested_capital']
                 
-                # Afficher les métriques cumulées après chaque fichier
-                current_total_roi = (total_pnl / total_invested_capital * 100) if total_invested_capital != 0 else float('inf')
-                current_daily_pnl_std = np.std(daily_pnls) if len(daily_pnls) > 1 else 0.0
-                
-                print(f"{Fore.YELLOW}  Métriques cumulées :")
-                print(f"{Fore.YELLOW}    Total PnL: {Fore.GREEN if total_pnl >= 0 else Fore.RED}${total_pnl:.2f}{Style.RESET_ALL}")
-                print(f"{Fore.YELLOW}    Total Capital Investi: ${total_invested_capital:.2f}")
-                print(f"{Fore.YELLOW}    Total ROI: {current_total_roi:.2f}%")
-                print(f"{Fore.YELLOW}    Daily PnL Std: ${current_daily_pnl_std:.2f}")
-                print(f"{Fore.YELLOW}    Jours positifs/nuls: {positive_or_zero_pnl_days}")
-                print(f"{Fore.YELLOW}    Jours négatifs: {negative_pnl_days}\n")
+                # Afficher les métriques cumulées après chaque fichier (mode verbose uniquement)
+                if self.verbose:
+                    current_total_roi = (total_pnl / total_invested_capital * 100) if total_invested_capital != 0 else float('inf')
+                    current_daily_pnl_std = np.std(daily_pnls) if len(daily_pnls) > 1 else 0.0
+                    
+                    print(f"{Fore.YELLOW}  Métriques cumulées :")
+                    print(f"{Fore.YELLOW}    Total PnL: {Fore.GREEN if total_pnl >= 0 else Fore.RED}${total_pnl:.2f}{Style.RESET_ALL}")
+                    print(f"{Fore.YELLOW}    Total Capital Investi: ${total_invested_capital:.2f}")
+                    print(f"{Fore.YELLOW}    Total ROI: {current_total_roi:.2f}%")
+                    print(f"{Fore.YELLOW}    Daily PnL Std: ${current_daily_pnl_std:.2f}")
+                    print(f"{Fore.YELLOW}    Jours positifs/nuls: {positive_or_zero_pnl_days}")
+                    print(f"{Fore.YELLOW}    Jours négatifs: {negative_pnl_days}\n")
 
+        end_time = datetime.now()
         total_roi = (total_pnl / total_invested_capital * 100) if total_invested_capital != 0 else float('inf')
         daily_pnl_std = np.std(daily_pnls) if len(daily_pnls) > 1 else 0.0
-        total_pnl_color = Fore.GREEN if total_pnl >= 0 else Fore.RED
-        print(f"\n{Fore.CYAN}{Style.BRIGHT}PnL global cumulé pour l'itération: {total_pnl_color}${total_pnl:.2f}{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}Capital investi total: ${total_invested_capital:.2f}")
-        print(f"{Fore.CYAN}ROI total (PnL/Capital Investi): {total_roi:.2f}%")
-        print(f"{Fore.CYAN}Écart-type des PnL Journaliers: ${daily_pnl_std:.2f}")
-        print(f"{Fore.CYAN}Jours avec PnL Positif ou Nul: {positive_or_zero_pnl_days}")
-        print(f"{Fore.CYAN}Jours avec PnL Négatif: {negative_pnl_days}")
+        
+        if self.verbose:
+            # Affichage détaillé (mode par défaut)
+            total_pnl_color = Fore.GREEN if total_pnl >= 0 else Fore.RED
+            print(f"\n{Fore.CYAN}{Style.BRIGHT}PnL global cumulé pour l'itération: {total_pnl_color}${total_pnl:.2f}{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}Capital investi total: ${total_invested_capital:.2f}")
+            print(f"{Fore.CYAN}ROI total (PnL/Capital Investi): {total_roi:.2f}%")
+            print(f"{Fore.CYAN}Écart-type des PnL Journaliers: ${daily_pnl_std:.2f}")
+            print(f"{Fore.CYAN}Jours avec PnL Positif ou Nul: {positive_or_zero_pnl_days}")
+            print(f"{Fore.CYAN}Jours avec PnL Négatif: {negative_pnl_days}")
+        else:
+            # Affichage compact avec noms de paramètres
+            duration = (end_time - start_time).total_seconds()
+            pnl_color = Fore.GREEN if total_pnl >= 0 else Fore.RED
+            
+            print(f"\n{Fore.CYAN}{'═' * 80}")
+            print(f"{Fore.CYAN}⏱  {start_time.strftime('%H:%M:%S')} → {end_time.strftime('%H:%M:%S')} ({duration:.0f}s) | {len(self.data_files)} fichiers | "
+                  f"{positive_or_zero_pnl_days}+ {negative_pnl_days}-")
+            print(f"{Fore.YELLOW}📊 start={params.get('trade_start_hour')} cut={params.get('trade_cutoff_hour')} "
+                  f"minPnL={params.get('min_market_pnl')} TP={params.get('take_profit_market_pnl')} "
+                  f"trail={params.get('trail_stop_market_pnl')} esc={params.get('min_escape_time')}s")
+            print(f"{Fore.YELLOW}   maxTrades={params.get('max_trades_per_day')} "
+                  f"val={params.get('trade_value_eur')}€ topN={params.get('top_n_threshold')} "
+                  f"stop={params.get('stop_echappee_threshold')} start={params.get('start_echappee_threshold')}")
+            print(f"{Fore.CYAN}💰 PnL: {pnl_color}${total_pnl:.2f}{Style.RESET_ALL} | "
+                  f"ROI: {total_roi:.2f}% | Std: ${daily_pnl_std:.2f} | Capital: ${total_invested_capital:.2f}")
+            print(f"{Fore.CYAN}{'═' * 80}{Style.RESET_ALL}")
 
         return {
             'total_pnl': total_pnl,

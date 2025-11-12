@@ -17,12 +17,12 @@ def main_sequential():
     data_files = glob.glob('C:/projets/bot/data/prices_data/dataset3/**/*.lz4', recursive=True)
 
     # Initialisation des composants
-    simulation_runner = MultiFileSimulator(data_files, parallel=True)
+    simulation_runner = MultiFileSimulator(data_files, parallel=True, verbose=False)
 
     best_params = {'trade_start_hour': '09:30', 'trade_cutoff_hour': '13:45', 'min_market_pnl': 43.0, 'take_profit_market_pnl': 70.0, 'trail_stop_market_pnl': 1000, 'min_escape_time': 83.0, 'max_trades_per_day': 10, 'trade_value_eur': 100.0, 'top_n_threshold': 1, 'stop_echappee_threshold': 1, 'start_echappee_threshold': 1.5, 'trade_interval_minutes': 150000, 'max_pnl_timeout_minutes': 6000.0}
 
     result = simulation_runner.run_all_files(best_params)
-    print(result)
+    # Le résultat est déjà affiché par run_all_files (mode verbose contrôle l'affichage)
     return
 
 

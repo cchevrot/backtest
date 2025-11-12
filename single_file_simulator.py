@@ -45,7 +45,7 @@ class SingleFileSimulator:
     """★★★ NIVEAU 3 ★★★ Exécute une simulation sur un seul fichier de données."""
     
     @staticmethod
-    def run_single_file(data_file, params):
+    def run_single_file(data_file, params, verbose=True):
         """
         ★★★ NIVEAU 3 : SIMULATION SUR UN SEUL FICHIER ★★★
         Exécute la stratégie sur UN SEUL fichier .lz4 (une journée de trading)
@@ -86,7 +86,8 @@ class SingleFileSimulator:
             max_pnl_timeout_minutes=params.get('max_pnl_timeout_minutes', 60.0),
             max_trades_per_day=params.get('max_trades_per_day', 3),
             trade_cutoff_hour=params.get('trade_cutoff_hour', "14:00"),
-            trade_start_hour=params.get('trade_start_hour', "09:30")
+            trade_start_hour=params.get('trade_start_hour', "09:30"),
+            verbose=verbose
         )
         timestamp = 0.0
 
@@ -112,12 +113,13 @@ class SingleFileSimulator:
         file_invested_capital = sum(trade['invested_amount'] for trade in algo.portfolio.trades if trade['status'] == 'closed')
         roi = (file_pnl / file_invested_capital * 100) if file_invested_capital != 0 else float('inf')
 
-        file_pnl_color = Fore.GREEN if file_pnl >= 0 else Fore.RED
-        print(f"\n{Fore.CYAN}{Style.BRIGHT}Résultats pour le fichier: {data_file}")
-        print(f"{Fore.CYAN}PnL global: {file_pnl_color}${file_pnl:.2f}{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}Nombre d'actions tradées: {num_traded}")
-        print(f"{Fore.CYAN}Capital investi: ${file_invested_capital:.2f}")
-        print(f"{Fore.CYAN}ROI (PnL/Capital Investi): {roi:.2f}%" if file_invested_capital != 0 else f"{Fore.CYAN}ROI (PnL/Capital Investi): N/A")
+        if verbose:
+            file_pnl_color = Fore.GREEN if file_pnl >= 0 else Fore.RED
+            print(f"\n{Fore.CYAN}{Style.BRIGHT}Résultats pour le fichier: {data_file}")
+            print(f"{Fore.CYAN}PnL global: {file_pnl_color}${file_pnl:.2f}{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}Nombre d'actions tradées: {num_traded}")
+            print(f"{Fore.CYAN}Capital investi: ${file_invested_capital:.2f}")
+            print(f"{Fore.CYAN}ROI (PnL/Capital Investi): {roi:.2f}%" if file_invested_capital != 0 else f"{Fore.CYAN}ROI (PnL/Capital Investi): N/A")
 
         return {
             'file_pnl': file_pnl,
