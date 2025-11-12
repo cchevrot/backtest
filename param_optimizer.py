@@ -117,73 +117,87 @@ class ParamOptimizer:
     
     def _generate_time_values(self, initial: str, min_val: str, max_val: str, 
                              step: int, max_tests: int) -> list:
-        """Génère des valeurs de temps (HH:MM)."""
+        """Génère des valeurs de temps (HH:MM) en commençant par la valeur initiale."""
         start_time = datetime.strptime(str(initial), "%H:%M")
         min_time = datetime.strptime(min_val, "%H:%M")
         max_time = datetime.strptime(max_val, "%H:%M")
         step_delta = timedelta(minutes=int(step))
         
-        values = [start_time.strftime("%H:%M")]
-        
-        # Valeurs avant
-        current = start_time - step_delta
-        before_values = []
-        while current >= min_time and len(values) + len(before_values) < max_tests:
-            before_values.insert(0, current.strftime("%H:%M"))
-            current -= step_delta
-        
-        # Valeurs après
-        current = start_time + step_delta
-        after_values = []
-        while current <= max_time and len(values) + len(before_values) + len(after_values) < max_tests:
-            after_values.append(current.strftime("%H:%M"))
-            current += step_delta
-        
+        # Si un seul test, retourner uniquement la valeur initiale
         if max_tests == 1:
             return [initial]
         
-        return (before_values + values + after_values)[:max_tests]
+        # Commencer par la valeur initiale
+        values = [start_time.strftime("%H:%M")]
+        
+        # Alterner entre avant et après pour explorer de manière équilibrée
+        current_before = start_time - step_delta
+        current_after = start_time + step_delta
+        
+        while len(values) < max_tests:
+            # Ajouter une valeur après si possible
+            if current_after <= max_time and len(values) < max_tests:
+                values.append(current_after.strftime("%H:%M"))
+                current_after += step_delta
+            
+            # Ajouter une valeur avant si possible
+            if current_before >= min_time and len(values) < max_tests:
+                values.append(current_before.strftime("%H:%M"))
+                current_before -= step_delta
+            
+            # Si on ne peut plus ajouter ni avant ni après, sortir
+            if current_after > max_time and current_before < min_time:
+                break
+        
+        return values
 
     def _generate_numeric_values(self, initial: float, min_val: float, max_val: float,
                                  step: float, max_tests: int) -> list:
-        """Génère des valeurs numériques."""
+        """Génère des valeurs numériques en commençant par la valeur initiale."""
         initial_val = float(initial)
         min_num = float(min_val)
         max_num = float(max_val)
         step_num = float(step)
         
-        values = [round(initial_val, 2)]
-        
-        # Valeurs avant
-        current = initial_val - step_num
-        before_values = []
-        while current >= min_num and len(values) + len(before_values) < max_tests:
-            before_values.insert(0, round(current, 2))
-            current -= step_num
-        
-        # Valeurs après
-        current = initial_val + step_num
-        after_values = []
-        while current <= max_num and len(values) + len(before_values) + len(after_values) < max_tests:
-            after_values.append(round(current, 2))
-            current += step_num
-        
+        # Si un seul test, retourner uniquement la valeur initiale
         if max_tests == 1:
             return [round(initial_val, 2)]
         
-        return (before_values + values + after_values)[:max_tests]
+        # Commencer par la valeur initiale
+        values = [round(initial_val, 2)]
+        
+        # Alterner entre avant et après pour explorer de manière équilibrée
+        current_before = initial_val - step_num
+        current_after = initial_val + step_num
+        
+        while len(values) < max_tests:
+            # Ajouter une valeur après si possible
+            if current_after <= max_num and len(values) < max_tests:
+                values.append(round(current_after, 2))
+                current_after += step_num
+            
+            # Ajouter une valeur avant si possible
+            if current_before >= min_num and len(values) < max_tests:
+                values.append(round(current_before, 2))
+                current_before -= step_num
+            
+            # Si on ne peut plus ajouter ni avant ni après, sortir
+            if current_after > max_num and current_before < min_num:
+                break
+        
+        return values
 
     def _generate_values(self, settings: dict, max_tests: int = 5) -> list:
         """
         Génère une liste de valeurs à tester pour un paramètre.
-        Commence par la valeur initiale, puis explore autour.
+        Commence TOUJOURS par la valeur initiale, puis explore autour.
         
         Args:
             settings: Configuration du paramètre (min, max, step)
             max_tests: Nombre maximum de valeurs à générer
             
         Returns:
-            Liste des valeurs à tester (commence par initial_value)
+            Liste des valeurs à tester (commence TOUJOURS par initial_value)
         """
         initial = settings["initial_value"]
         min_val = settings["min_value"]
@@ -271,6 +285,7 @@ class ParamOptimizer:
                              top_n: int = 10, max_total_tests: int = 1000):
         """
         Lance l'optimisation complète des paramètres.
+        LE PREMIER TEST UTILISERA TOUJOURS TOUTES LES VALEURS INITIALES.
         
         Args:
             max_tests_per_param: Nombre de valeurs à tester par paramètre
@@ -290,7 +305,8 @@ class ParamOptimizer:
 
         self._log(f"\nDÉBUT OPTIMISATION → {total_combos} tests max")
         self._log(f"Mode: {'Parallèle' if self.multi_file_simulator.parallel else 'Séquentiel'}")
-        self._log(f"Verbose: {'Oui' if self.multi_file_simulator.verbose else 'Non (CSV compact)'}\n")
+        self._log(f"Verbose: {'Oui' if self.multi_file_simulator.verbose else 'Non (CSV compact)'}")
+        self._log(f"⭐ Premier test = TOUTES les valeurs initiales\n")
 
         # Tester toutes les combinaisons
         combo_iterator = product(*param_values_list)
@@ -306,87 +322,87 @@ class ParamOptimizer:
 
 
 # ═══════════════════════════════════════════════════════════
-# DEFAULT PARAMETER CONFIGURATION
+# DEFAULT PARAMETER CONFIGURATION AVEC VARIATIONS
 # ═══════════════════════════════════════════════════════════
 
 DEFAULT_PARAMS_CONFIG = {
     "trade_start_hour": {
         "initial_value": "09:30",
-        "min_value": "09:30",
-        "max_value": "09:30",
-        "step": 0
+        "min_value": "09:00",      # -30 min
+        "max_value": "10:00",      # +30 min
+        "step": 15                 # Pas de 15 minutes
     },
     "trade_cutoff_hour": {
         "initial_value": "13:45",
-        "min_value": "13:45",
-        "max_value": "13:45",
-        "step": 0
+        "min_value": "13:00",      # -45 min
+        "max_value": "15:00",      # +75 min
+        "step": 15                 # Pas de 15 minutes
     },
     "min_market_pnl": {
         "initial_value": 43.0,
-        "min_value": 43.0,
-        "max_value": 43.0,
-        "step": 0
+        "min_value": 30.0,         # -13€
+        "max_value": 60.0,         # +17€
+        "step": 5.0                # Pas de 5€
     },
     "take_profit_market_pnl": {
         "initial_value": 70.0,
-        "min_value": 70.0,
-        "max_value": 70.0,
-        "step": 0
+        "min_value": 50.0,         # -20€
+        "max_value": 100.0,        # +30€
+        "step": 10.0               # Pas de 10€
     },
     "trail_stop_market_pnl": {
         "initial_value": 1040,
-        "min_value": 1040,
-        "max_value": 1040,
-        "step": 0
+        "min_value": 800,          # -240€
+        "max_value": 1500,         # +460€
+        "step": 100                # Pas de 100€
     },
     "min_escape_time": {
         "initial_value": 83.0,
-        "min_value": 83.0,
-        "max_value": 83.0,
-        "step": 0
+        "min_value": 60.0,         # -23 sec
+        "max_value": 120.0,        # +37 sec
+        "step": 10.0               # Pas de 10 secondes
     },
     "max_trades_per_day": {
         "initial_value": 10,
-        "min_value": 10,
-        "max_value": 10,
-        "step": 0
+        "min_value": 5,            # -5 trades
+        "max_value": 20,           # +10 trades
+        "step": 2                  # Pas de 2 trades
     },
     "trade_value_eur": {
         "initial_value": 100.0,
-        "min_value": 100.0,
-        "max_value": 100.0,
-        "step": 0
+        "min_value": 50.0,         # -50€
+        "max_value": 200.0,        # +100€
+        "step": 25.0               # Pas de 25€
     },
     "top_n_threshold": {
         "initial_value": 1,
         "min_value": 1,
-        "max_value": 1,
-        "step": 0
+        "max_value": 5,            # +4
+        "step": 1
     },
     "stop_echappee_threshold": {
         "initial_value": 1,
         "min_value": 1,
-        "max_value": 1,
-        "step": 0
+        "max_value": 3,            # +2
+        "step": 0.5                # Pas de 0.5
     },
     "start_echappee_threshold": {
         "initial_value": 1.5,
-        "min_value": 1.5,
-        "max_value": 1.5,
-        "step": 0
+        "min_value": 1.0,          # -0.5
+        "max_value": 3.0,          # +1.5
+        "step": 0.5                # Pas de 0.5
     },
     "trade_interval_minutes": {
         "initial_value": 150000,
-        "min_value": 150000,
-        "max_value": 150000,
-        "step": 0
+        "min_value": 100000,       # -50k
+        "max_value": 200000,       # +50k
+        "step": 25000              # Pas de 25k
     },
     "max_pnl_timeout_minutes": {
         "initial_value": 6000.0,
-        "min_value": 6000.0,
-        "max_value": 6000.0,
-        "step": 0
+        "min_value": 4000.0,       # -2000
+        "max_value": 8000.0,       # +2000
+        "step": 1000.0             # Pas de 1000
     }
 }
 
@@ -402,9 +418,9 @@ def main():
     optimizer.save_params(DEFAULT_PARAMS_CONFIG)
     optimizer.load_params()
     optimizer.run_full_optimization(
-        max_tests_per_param=3, 
-        top_n=10, 
-        max_total_tests=1000
+        max_tests_per_param=3,     # 3 valeurs par paramètre
+        top_n=10,                  # Garde les 10 meilleurs
+        max_total_tests=1000       # Maximum 1000 tests
     )
 
 
