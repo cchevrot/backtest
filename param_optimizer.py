@@ -28,6 +28,53 @@ class ParamOptimizer:
         # Nouvelle variable: meilleure config globale
         self.global_best_pnl = float('-inf')
         self.global_best_config = None
+        
+        # 🆕 Cache des configurations déjà testées
+        self.config_cache = {}
+        self._load_cache_from_csv()
+
+    # ========== 🆕 Gestion du cache ==========
+    
+    def _config_to_key(self, config: dict) -> str:
+        """Convertit une config en clé unique (JSON trié)."""
+        return json.dumps(config, sort_keys=True)
+    
+    def _load_cache_from_csv(self):
+        """Charge toutes les configurations déjà testées depuis results.csv."""
+        if not os.path.exists(self.results_file):
+            print("📂 Aucun historique trouvé, démarrage avec cache vide")
+            return
+        
+        try:
+            with open(self.results_file, 'r') as f:
+                reader = csv.DictReader(f)
+                rows = list(reader)
+                
+                for row in rows:
+                    pnl = float(row.pop('pnl'))
+                    # Convertit les valeurs en types appropriés
+                    config = {}
+                    for key, value in row.items():
+                        try:
+                            # Essaie int d'abord
+                            config[key] = int(value)
+                        except ValueError:
+                            try:
+                                # Puis float
+                                config[key] = float(value)
+                            except ValueError:
+                                # Sinon garde en string
+                                config[key] = value
+                    
+                    config_key = self._config_to_key(config)
+                    self.config_cache[config_key] = pnl
+                    self.all_results.append((pnl, config))
+            
+            print(f"✅ Cache chargé: {len(self.config_cache)} configurations depuis {self.results_file}")
+            
+        except Exception as e:
+            print(f"⚠️  Erreur lors du chargement du cache: {e}")
+            self.config_cache = {}
 
     # ========== Gestion des paramètres ==========
     
@@ -168,9 +215,31 @@ class ParamOptimizer:
     # ========== Simulation ==========
     
     def _test_params(self, param_values: dict) -> float:
-        return self.multi_file_simulator.run_all_files(param_values)['total_pnl']
+        """🆕 Teste une config, utilise le cache si déjà testée."""
+        config_key = self._config_to_key(param_values)
+        
+        # Vérification dans le cache
+        if config_key in self.config_cache:
+            cached_pnl = self.config_cache[config_key]
+            print(f"      ♻️  Config déjà testée (cache) → PnL={cached_pnl:.2f}")
+            return cached_pnl
+        
+        # Nouvelle simulation
+        pnl = self.multi_file_simulator.run_all_files(param_values)['total_pnl']
+        
+        # Ajout au cache
+        self.config_cache[config_key] = pnl
+        
+        return pnl
 
     def _write_result(self, row: dict):
+        """🆕 Écrit un résultat seulement s'il n'est pas déjà dans le fichier."""
+        config_key = self._config_to_key({k: v for k, v in row.items() if k != 'pnl'})
+        
+        # Si déjà en cache, ne pas réécrire
+        if config_key in self.config_cache:
+            return
+        
         file_exists = os.path.exists(self.results_file) and os.stat(self.results_file).st_size > 0
         with open(self.results_file, "a", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=row.keys())
@@ -179,6 +248,7 @@ class ParamOptimizer:
             writer.writerow(row)
 
     def _save_best(self, top_n: int):
+        """Sauvegarde les N meilleures configs."""
         self.all_results.sort(reverse=True, key=lambda x: x[0])
         with open(self.best_file, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=["pnl"] + list(self.params.keys()))
@@ -227,10 +297,11 @@ class ParamOptimizer:
         """
         Optimisation itérative:
         1. Charge la meilleure config précédente (sauf si reset_from_initial=True)
-        2. Boucle sur tous les paramètres actifs (ordre de priorité)
-        3. Pour chaque paramètre: teste autour de la valeur actuelle
-        4. Répète jusqu'à convergence ou max_iterations
-        5. Sauvegarde la meilleure config à chaque itération si amélioration
+        2. Charge le cache depuis results.csv (configurations déjà testées)
+        3. Boucle sur tous les paramètres actifs (ordre de priorité)
+        4. Pour chaque paramètre: teste autour de la valeur actuelle (ou réutilise le cache)
+        5. Répète jusqu'à convergence ou max_iterations
+        6. Sauvegarde la meilleure config à chaque itération si amélioration
         
         Args:
             max_tests_per_param: Nombre de valeurs à tester par paramètre
@@ -239,9 +310,8 @@ class ParamOptimizer:
         """
         self.load_params()
         
-        # Nettoyage
-        for f in [self.results_file, self.best_file]:
-            open(f, "w").close()
+        # 🆕 Plus de nettoyage des CSV ! Ils sont conservés
+        # Les fichiers CSV sont maintenant persistants entre les exécutions
         
         # Configuration de départ
         if reset_from_initial:
@@ -266,6 +336,7 @@ class ParamOptimizer:
         print(f"🎯 Config de départ: PnL = {current_best_pnl:.2f}")
         print(f"🏆 Meilleure config globale: PnL = {self.global_best_pnl:.2f}")
         print(f"📋 Paramètres actifs: {len(self.param_order)}/{len(self.params)}")
+        print(f"♻️  Configurations en cache: {len(self.config_cache)}")
         print(f"{'='*80}")
         
         self.all_results.append((current_best_pnl, current_best_config.copy()))
@@ -330,8 +401,10 @@ class ParamOptimizer:
         print(f"📈 PnL final itération: {current_best_pnl:.2f}")
         print(f"🏆 PnL meilleur global: {self.global_best_pnl:.2f}")
         print(f"🔢 Itérations: {iteration}/{max_iterations}")
+        print(f"♻️  Configurations testées (total): {len(self.config_cache)}")
         print(f"📁 Résultats: {self.best_file}")
         print(f"💾 Config sauvegardée: {self.best_config_file}")
+        print(f"📜 Historique complet: {self.results_file}")
         print(f"{'='*80}\n")
 
 
