@@ -1,0 +1,19 @@
+{
+    "timestamp": "2025-11-17T15:44:58.437025",
+    "pnl": 504.7927310578525,
+    "config": {
+        "min_market_pnl": 38.0,
+        "take_profit_market_pnl": 80.0,
+        "trail_stop_market_pnl": 40.0,
+        "trade_start_hour": "09:30",
+        "trade_cutoff_hour": "13:15",
+        "min_escape_time": 83.0,
+        "max_trades_per_day": 10.0,
+        "stop_echappee_threshold": 1.5,
+        "start_echappee_threshold": 2.0,
+        "top_n_threshold": 1,
+        "trade_value_eur": 100.0,
+        "trade_interval_minutes": 150000,
+        "max_pnl_timeout_minutes": 6000.0
+    }
+}
