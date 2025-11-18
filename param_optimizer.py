@@ -170,12 +170,17 @@ class ParamOptimizer:
         
         return values
 
-    def _generate_values_around_current(self, param_name: str, current_value, max_tests: int) -> list:
+    def _generate_values_around_current(self, param_name: str, current_value, 
+                                        max_tests: int, expand_search: bool = False) -> list:
         """
         Génère des valeurs autour de la valeur ACTUELLE (meilleure trouvée précédemment)
         au lieu de la valeur initiale du JSON.
+        
+        Args:
+            expand_search: Si True, élargit la recherche au-delà de max_tests pour trouver
+                          des valeurs non encore testées
         """
-        if max_tests == 1:
+        if max_tests == 1 and not expand_search:
             return [current_value]
         
         settings = self.params[param_name]
@@ -198,11 +203,13 @@ class ParamOptimizer:
         values = [fmt(current)]
         before, after = current - step, current + step
         
-        while len(values) < max_tests:
+        max_iterations = max_tests if not expand_search else 1000  # Limite de sécurité
+        
+        while len(values) < max_iterations:
             if after <= max_val:
                 values.append(fmt(after))
                 after += step
-            if len(values) >= max_tests:
+            if len(values) >= max_tests and not expand_search:
                 break
             if before >= min_val:
                 values.append(fmt(before))
@@ -211,6 +218,33 @@ class ParamOptimizer:
                 break
         
         return values
+    
+    def _find_untested_values(self, param_name: str, current_config: dict, 
+                             max_tests: int) -> list:
+        """
+        Trouve des valeurs non encore testées pour un paramètre donné.
+        Élargit progressivement la recherche autour de la valeur actuelle.
+        """
+        current_value = current_config[param_name]
+        
+        # Génère beaucoup plus de valeurs que nécessaire
+        all_possible_values = self._generate_values_around_current(
+            param_name, current_value, max_tests, expand_search=True
+        )
+        
+        # Filtre pour ne garder que les valeurs non testées
+        untested_values = []
+        for value in all_possible_values:
+            test_config = current_config.copy()
+            test_config[param_name] = value
+            config_key = self._config_to_key(test_config)
+            
+            if config_key not in self.config_cache:
+                untested_values.append(value)
+                if len(untested_values) >= max_tests:
+                    break
+        
+        return untested_values
 
     # ========== Simulation ==========
     
@@ -259,18 +293,31 @@ class ParamOptimizer:
     # ========== Optimisation d'un paramètre ==========
     
     def _optimize_single_param(self, param_name: str, current_config: dict, 
-                                max_tests: int) -> tuple:
+                                max_tests: int, force_exploration: bool = False) -> tuple:
         """
         Optimise un seul paramètre en testant différentes valeurs 
         autour de la valeur ACTUELLE (pas la valeur initiale).
+        
+        Args:
+            force_exploration: Si True, cherche des valeurs non testées au lieu
+                              des valeurs habituelles autour de current
         """
         priority = self.params[param_name]["priority"]
         current_value = current_config[param_name]
         
-        # Génère des valeurs autour de la valeur actuelle
-        test_values = self._generate_values_around_current(param_name, current_value, max_tests)
-        
-        print(f"  🔍 {param_name} (P{priority}): current={current_value} → test={test_values}")
+        # 🆕 Mode exploration: cherche des valeurs non testées
+        if force_exploration:
+            test_values = self._find_untested_values(param_name, current_config, max_tests)
+            if test_values:
+                print(f"  🔍 {param_name} (P{priority}): current={current_value} → explore={test_values} 🌍")
+            else:
+                print(f"  ✓ {param_name} (P{priority}): toutes les valeurs proches déjà testées")
+                # Fallback sur les valeurs normales
+                test_values = self._generate_values_around_current(param_name, current_value, max_tests)
+        else:
+            # Mode normal: valeurs autour de current
+            test_values = self._generate_values_around_current(param_name, current_value, max_tests)
+            print(f"  🔍 {param_name} (P{priority}): current={current_value} → test={test_values}")
         
         param_results = []
         
@@ -352,10 +399,17 @@ class ParamOptimizer:
             iteration_start_pnl = current_best_pnl
             improvements_count = 0
             
+            # 🆕 Détermine si on doit explorer de nouvelles valeurs
+            # Si aucune amélioration à l'itération précédente, on active l'exploration
+            force_exploration = (iteration > 1 and iteration_start_pnl <= getattr(self, '_previous_iteration_pnl', float('inf')))
+            
+            if force_exploration:
+                print("  🌍 Mode EXPLORATION activé: recherche de valeurs non testées")
+            
             # Optimisation séquentielle de chaque paramètre ACTIF
             for param_name in self.param_order:
                 best_pnl, best_value, best_config = self._optimize_single_param(
-                    param_name, current_best_config, max_tests_per_param
+                    param_name, current_best_config, max_tests_per_param, force_exploration
                 )
                 
                 # Vérification de l'amélioration
@@ -386,6 +440,9 @@ class ParamOptimizer:
                 self.save_best_config(self.global_best_config, self.global_best_pnl)
             else:
                 print(f"     • Écart vs meilleur: {current_best_pnl - self.global_best_pnl:+.2f}")
+            
+            # 🆕 Mise à jour de best_results.csv après chaque itération
+            self._save_best(top_n=10)
             
             # Condition d'arrêt: aucune amélioration
             if iteration_gain <= 0:
@@ -526,7 +583,7 @@ def main():
         optimizer.save_params(DEFAULT_PARAMS)
     
     # Lance l'optimisation (utilise automatiquement la meilleure config précédente)
-    optimizer.run_optimization(max_tests_per_param=3, max_iterations=10)
+    optimizer.run_optimization(max_tests_per_param=3, max_iterations=10000)
     
     # Pour forcer un reset depuis les valeurs initiales:
     # optimizer.run_optimization(max_tests_per_param=3, max_iterations=10, reset_from_initial=True)
