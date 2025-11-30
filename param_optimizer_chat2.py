@@ -6,16 +6,6 @@
                       OPTIMISATEUR DE PARAMÈTRES — VERSION PÉDAGOGIQUE
 ================================================================================
 
-Ce fichier est pensé pour être lu TOP-DOWN :
-
-1) On commence par les imports et la config par défaut
-2) Puis l'adaptateur du simulateur
-3) Puis la classe principale ParamOptimizer (chef d'orchestre)
-4) Puis les composants : Parameter, ParameterSpace, ResultCache, BestConfig
-5) Enfin le main()
-
-Les schémas ASCII ci-dessous résument l'architecture :
-
 ARCHITECTURE GLOBALE
 ---------------------
 
@@ -26,53 +16,36 @@ ARCHITECTURE GLOBALE
                 │
                 ▼
     ┌─────────────────────┐
-    │ ParameterSpace      │ <── lit params.json
-    │ (définit domaines)  │
+    │ ParameterSpace      │
     └─────────────────────┘
                 │
                 ▼
     ┌─────────────────────┐
-    │ BestConfig          │ <── lit best_config.json
-    │ (meilleure solution)│
+    │ BestConfig          │
     └─────────────────────┘
                 │
                 ▼
     ┌─────────────────────┐
-    │ ResultCache         │ <── lit results.csv
-    │ (mémoisation PnL)   │
+    │ ResultCache         │
     └─────────────────────┘
                 │
                 ▼
     ┌─────────────────────┐
-    │ TradingSimulator    │ <── wrap MultiFileSimulator.run_all_files
+    │ TradingSimulator    │  <── run(config)
     └─────────────────────┘
-
 
 BOUCLE D'OPTIMISATION
 ----------------------
 
-+----------------------------------------------------------+
-| OPTIMIZE()                                               |
-+----------------------------------------------------------+
-         |
-         v
- 1. charger paramètres (ParameterSpace.load)
- 2. charger meilleure config connue (BestConfig.load_or_initial)
- 3. calculer son PnL (evaluate)
-         |
-         v
- +--------------------------------------+
- | pour i = 1 à max_iterations :        |
- |      amélioration = False            |
- |      pour chaque paramètre actif :   |
- |           tester plusieurs valeurs   |
- |           si meilleure → mise à jour |
- |           amélioration = True        |
- |      si !amélioration : STOP         |
- +--------------------------------------+
-         |
-         v
- 4. sauvegarder la meilleure solution (BestConfig)
+OPTIMIZE():
+  1) charger paramètres
+  2) charger best_config
+  3) évaluer PnL initial
+  4) pour i=1..max_iterations :
+         pour chaque param actif :
+             explorer valeurs autour du centre
+             jusqu’aux bornes (centre ± n*step)
+  5) sauvegarder best global
 """
 
 import json
@@ -81,8 +54,7 @@ import os
 import glob
 from datetime import datetime, timedelta
 
-# On suppose que tu as déjà ce module dans ton projet
-# (comme dans ton code original)
+# ⚠ Nécessaire : ton simulateur original
 from multi_file_simulator import MultiFileSimulator
 
 
@@ -163,7 +135,6 @@ DEFAULT_PARAMS = {
         "priority": 9,
         "enabled": True
     },
-    # tu peux réactiver ceux-ci si tu veux
     "top_n_threshold": {
         "initial_value": 1,
         "min_value": 1,
@@ -206,15 +177,11 @@ DEFAULT_PARAMS = {
 class TradingSimulator:
     """
     Adaptateur autour de MultiFileSimulator pour exposer une méthode simple:
-
         pnl = simulator.run(config)
-
-    Au lieu d'appeler toi-même run_all_files(config)['total_pnl'].
     """
 
     def __init__(self, data_files=None, parallel=True):
         if data_files is None:
-            # même logique que ton code original
             data_files = glob.glob('../data/prices_data/dataset3/**/*.lz4',
                                    recursive=True)
 
@@ -230,35 +197,10 @@ class TradingSimulator:
 
 
 # =============================================================================
-#                         PARTIE A — TOP LEVEL
+#                         PARAM OPTIMIZER (TOP-DOWN)
 # =============================================================================
 
 class ParamOptimizer:
-    """
-    Optimisateur pensé top-down.
-
-    SCHÉMA ASCII (rappel) :
-    ------------------------
-
-    +----------------------------------------------------------+
-    | OPTIMIZE()                                               |
-    +----------------------------------------------------------+
-             |
-             v
-     1. charger paramètres (ParameterSpace.load)
-     2. charger meilleure config (BestConfig.load_or_initial)
-     3. calculer PnL initial (evaluate)
-             |
-             v
-     4. boucle :
-          - pour chaque paramètre :
-                tester plusieurs valeurs
-                garder la meilleure
-          - si pas d'amélioration : on arrête
-             |
-             v
-     5. résultat final : BestConfig
-    """
 
     def __init__(self, simulator, param_file, cache_file, best_file):
         self.simulator = simulator
@@ -266,27 +208,22 @@ class ParamOptimizer:
         self.cache = ResultCache(cache_file)
         self.best = BestConfig(best_file)
 
-    def optimize(self, max_tests=3, max_iterations=50):
+    def optimize(self, max_tests=0, max_iterations=50):
         """
-        Fonction principale à lire en premier quand tu explores le fichier.
+        max_tests=0 = pas de limite → explore toute la plage autour du centre.
         """
 
-        # 1) Charger les paramètres
         self.param_space.load()
 
-        # 2) Charger meilleure config si déjà existante, sinon config initiale
         current_cfg = self.best.load_or_initial(self.param_space)
 
-        # 3) Calculer PnL de départ
         current_pnl = self.evaluate(current_cfg)
         print(f"PnL de départ : {current_pnl:.2f}")
 
-        # 4) Boucle sur les itérations
         for iteration in range(1, max_iterations + 1):
             print(f"\n=== ITÉRATION {iteration}/{max_iterations} ===")
             improved = False
 
-            # Parcours des paramètres actifs par ordre de priorité
             for param in self.param_space.active_params():
                 new_cfg, new_pnl = self.optimize_param(param, current_cfg, max_tests)
 
@@ -295,59 +232,51 @@ class ParamOptimizer:
                     current_cfg = new_cfg
                     current_pnl = new_pnl
                     improved = True
-                else:
-                    print(f"  ➜ Pas mieux pour {param.name} (meilleur testé: {new_pnl:.2f})")
 
-            # Sauvegarde si meilleure config globale
+            # Toujours mettre à jour le best global
             self.best.update_if_better(current_cfg, current_pnl)
 
-            # Si aucune amélioration sur l’itération entière → convergence atteinte
             if not improved:
-                print("Aucune amélioration sur cette itération → arrêt.")
-                break
+                print("  (aucune amélioration mais on continue)")
 
         print(f"\nFIN : meilleur PnL global = {self.best.pnl:.2f}")
         return self.best.config
 
     # -------------------------------------------------------------------------
-    #         NIVEAU INTERMÉDIAIRE : optimisation d’un paramètre
+    #                  Optimisation d'un paramètre (± n·step)
     # -------------------------------------------------------------------------
+
     def optimize_param(self, param, base_cfg, max_tests):
-        """
-        Optimise un seul paramètre :
-          - génère des valeurs candidates
-          - teste chaque config
-          - renvoie (config_best, pnl_best)
-        """
-        current_value = base_cfg[param.name]
-        candidates = param.generate_candidates_around(current_value, max_tests)
+        center = base_cfg[param.name]
+        candidates = param.generate_candidates_around(center, max_tests)
+
+        print(f"  → Paramètre {param.name} : centre={center} (tests={len(candidates)})")
 
         best_cfg = base_cfg
-        best_pnl = float('-inf')
+        best_pnl = float("-inf")
 
         for val in candidates:
             cfg = base_cfg.copy()
             cfg[param.name] = val
             pnl = self.evaluate(cfg)
-            if pnl > best_pnl:
-                best_pnl = pnl
-                best_cfg = cfg
 
+            print(f"      {param.name} = {val} → PnL = {pnl:.2f}")
+
+            if pnl > best_pnl:
+                best_cfg = cfg
+                best_pnl = pnl
+
+        print(f"  → Meilleur pour {param.name} = {best_cfg[param.name]} ({best_pnl:.2f})")
         return best_cfg, best_pnl
 
     # -------------------------------------------------------------------------
-    #                EVALUATION : cache + simulateur
+    #                  Cache + simulation
     # -------------------------------------------------------------------------
-    def evaluate(self, config: dict) -> float:
-        """
-        Teste une configuration :
-        - si déjà présente dans le cache (CSV) → récupérée directement
-        - sinon → simulation avec TradingSimulator + insertion dans le cache
-        """
+
+    def evaluate(self, config):
         key = self.cache.key(config)
         cached = self.cache.get(key)
         if cached is not None:
-            # print(f"  (cache) PnL={cached:.2f}")  # tu peux décommenter
             return cached
 
         pnl = self.simulator.run(config)
@@ -356,24 +285,12 @@ class ParamOptimizer:
 
 
 # =============================================================================
-#                    PARTIE B — COMPOSANTS INTERMÉDIAIRES
+#                       COMPOSANTS : PARAMETERS
 # =============================================================================
 
 class Parameter:
-    """
-    Représente UN paramètre.
-    
-    Exemple :
-        name="min_market_pnl"
-        initial=43.0
-        min=30.0
-        max=60.0
-        step=5.0
-        priority=1
-        enabled=True
-    """
 
-    def __init__(self, name, settings: dict):
+    def __init__(self, name, settings):
         self.name = name
         self.initial = settings["initial_value"]
         self.min = settings["min_value"]
@@ -382,43 +299,44 @@ class Parameter:
         self.priority = settings["priority"]
         self.enabled = settings.get("enabled", True)
 
-    def is_time(self) -> bool:
-        """Renvoie True si le paramètre est de type 'heure' (HH:MM)."""
+    def is_time(self):
         return isinstance(self.initial, str) and ":" in self.initial
 
-    def generate_candidates_around(self, center, max_tests: int):
-        """
-        Génère une liste de valeurs autour de 'center'.
-        
-        Exemple numérique :
-            center = 43, step = 5 → [43, 38, 48, 33, 53, ...]
-        
-        Exemple temps:
-            center = "09:30", step = 15 → ["09:30","09:15","09:45","09:00","10:00"...]
-        """
+    # -------------------------------------------------------------------------
+    #           NOUVELLE VERSION FULL (center ± n·step jusqu’aux bornes)
+    # -------------------------------------------------------------------------
+
+    def generate_candidates_around(self, center, max_tests):
         if self.is_time():
             return self._gen_time(center, max_tests)
         return self._gen_num(center, max_tests)
 
+    # 🔥 NUMÉRIQUE : exploration complète autour du centre
     def _gen_num(self, center, max_tests):
         values = [center]
+
         before = center - self.step
         after = center + self.step
 
-        while len(values) < max_tests:
-            if before >= self.min:
-                values.append(before)
-                before -= self.step
+        while before >= self.min or after <= self.max:
+
             if after <= self.max:
                 values.append(after)
                 after += self.step
-            if before < self.min and after > self.max:
+
+            if before >= self.min:
+                values.append(before)
+                before -= self.step
+
+            # max_tests=0 → pas de limite
+            if max_tests and len(values) >= max_tests:
                 break
+
         return values
 
+    # 🔥 TEMPS : exploration complète autour du centre
     def _gen_time(self, center_str, max_tests):
-        def to_dt(s):
-            return datetime.strptime(s, "%H:%M")
+        def to_dt(s): return datetime.strptime(s, "%H:%M")
 
         center = to_dt(center_str)
         min_t = to_dt(self.min)
@@ -426,151 +344,130 @@ class Parameter:
         step = timedelta(minutes=int(self.step))
 
         values = [center_str]
+
         before = center - step
         after = center + step
 
-        while len(values) < max_tests:
-            if before >= min_t:
-                values.append(before.strftime("%H:%M"))
-                before -= step
+        while before >= min_t or after <= max_t:
+
             if after <= max_t:
                 values.append(after.strftime("%H:%M"))
                 after += step
-            if before < min_t and after > max_t:
+
+            if before >= min_t:
+                values.append(before.strftime("%H:%M"))
+                before -= step
+
+            if max_tests and len(values) >= max_tests:
                 break
 
         return values
 
 
-class ParameterSpace:
-    """
-    Gère l’ensemble des paramètres, lit le JSON et fournit :
-      - la liste des paramètres actifs
-      - la config initiale
-    """
+# =============================================================================
+#                 PARAMETER SPACE : ensemble des paramètres
+# =============================================================================
 
-    def __init__(self, filename: str):
+class ParameterSpace:
+
+    def __init__(self, filename):
         self.filename = filename
-        self.params: dict[str, Parameter] = {}
+        self.params = {}
 
     def load(self):
-        """Charge params.json et crée les objets Parameter."""
         with open(self.filename) as f:
             raw = json.load(f)
         for name, settings in raw.items():
             self.params[name] = Parameter(name, settings)
 
     def active_params(self):
-        """Liste des Parameter 'enabled', triés par priorité."""
         return sorted(
             [p for p in self.params.values() if p.enabled],
             key=lambda p: p.priority
         )
 
-    def initial_config(self) -> dict:
-        """Construit {nom_param: valeur_initiale}."""
-        return {n: p.initial for n, p in self.params.items()}
+    def initial_config(self):
+        return {name: p.initial for name, p in self.params.items()}
 
 
-def _parse_csv_value(v: str):
-    """Convertit une chaîne CSV en int/float/str pour garder les types."""
-    try:
-        iv = int(v)
-        return iv
-    except ValueError:
-        try:
-            fv = float(v)
-            return fv
-        except ValueError:
-            return v
+# =============================================================================
+#                           RESULT CACHE
+# =============================================================================
 
+def _parse_csv_value(v):
+    try: return int(v)
+    except: pass
+    try: return float(v)
+    except: pass
+    return v
 
 class ResultCache:
-    """
-    Cache des configurations déjà testées.
 
-    Structure interne :
-        self.data : dict[config_key] = pnl
-
-    Où config_key est un json.dumps trié des paramètres.
-    """
-
-    def __init__(self, csv_file: str):
-        self.csv_file = csv_file
-        self.data: dict[str, float] = {}
+    def __init__(self, csv_file):
+        self.file = csv_file
+        self.data = {}
         if os.path.exists(csv_file):
             self._load()
 
     def _load(self):
-        with open(self.csv_file, "r") as f:
+        with open(self.file) as f:
             reader = csv.DictReader(f)
             for row in reader:
                 pnl = float(row.pop("pnl"))
-                # row contient les paramètres sous forme de str
-                config = {k: _parse_csv_value(v) for k, v in row.items()}
+                config = {k:_parse_csv_value(v) for k,v in row.items()}
                 key = self.key(config)
                 self.data[key] = pnl
-        print(f"Cache chargé : {len(self.data)} configurations.")
+        print(f"Cache chargé : {len(self.data)} configs.")
 
-    def key(self, config: dict) -> str:
-        """Crée une clé unique basée sur le JSON trié des paramètres."""
+    def key(self, config):
         return json.dumps(config, sort_keys=True)
 
-    def get(self, key: str):
+    def get(self, key):
         return self.data.get(key)
 
-    def store(self, key: str, pnl: float, config: dict):
-        """Ajoute au cache en mémoire + append dans le CSV."""
+    def store(self, key, pnl, config):
         self.data[key] = pnl
         self._append_csv(pnl, config)
 
-    def _append_csv(self, pnl: float, config: dict):
-        exists = os.path.exists(self.csv_file)
-        with open(self.csv_file, "a", newline="") as f:
+    def _append_csv(self, pnl, config):
+        exists = os.path.exists(self.file)
+        with open(self.file, "a", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=["pnl"] + list(config.keys()))
             if not exists:
                 writer.writeheader()
             writer.writerow({"pnl": pnl, **config})
 
 
+# =============================================================================
+#                             BEST CONFIG
+# =============================================================================
+
 class BestConfig:
-    """
-    Gère la meilleure configuration trouvée.
 
-    Fichier JSON :
-        {
-           "pnl": <float>,
-           "config": { param_name: value, ... }
-        }
-    """
-
-    def __init__(self, filename: str):
+    def __init__(self, filename):
         self.filename = filename
-        self.config: dict | None = None
-        self.pnl: float = float('-inf')
+        self.config = None
+        self.pnl = float("-inf")
 
-    def load_or_initial(self, param_space: ParameterSpace) -> dict:
-        """Charge best_config.json si existe, sinon renvoie config initiale."""
+    def load_or_initial(self, param_space):
         if not os.path.exists(self.filename):
+            print("Aucun best_config → valeurs initiales.")
             self.config = param_space.initial_config()
-            print("Aucune best_config existante → utilisation des valeurs initiales.")
             return self.config
 
-        with open(self.filename, "r") as f:
+        with open(self.filename) as f:
             data = json.load(f)
-
-        self.config = data["config"]
-        self.pnl = data["pnl"]
-        print(f"Meilleure config existante chargée. PnL = {self.pnl:.2f}")
+            self.config = data["config"]
+            self.pnl = data["pnl"]
+        print(f"Meilleur existant: {self.pnl:.2f}")
         return self.config.copy()
 
-    def update_if_better(self, config: dict, pnl: float):
-        """Si pnl > meilleur connu, met à jour et sauvegarde."""
+    def update_if_better(self, config, pnl):
         if pnl > self.pnl:
-            self.pnl = pnl
+            print(f"🏆 Nouveau best global : {pnl:.2f}")
             self.config = config.copy()
+            self.pnl = pnl
             self._save()
-            print(f"🏆 Nouveau meilleur PnL global : {pnl:.2f}")
 
     def _save(self):
         with open(self.filename, "w") as f:
@@ -578,7 +475,7 @@ class BestConfig:
 
 
 # =============================================================================
-#                                   MAIN
+#                                    MAIN
 # =============================================================================
 
 def main():
@@ -586,14 +483,14 @@ def main():
     cache_file = "results.csv"
     best_file = "best_config.json"
 
-    # Si params.json n'existe pas, on le crée avec DEFAULT_PARAMS
+    # Si params.json n'existe pas → créer automatiquement
     if not os.path.exists(param_file):
-        print(f"{param_file} introuvable → création avec DEFAULT_PARAMS.")
+        print(f"{param_file} introuvable → création.")
         with open(param_file, "w") as f:
             json.dump(DEFAULT_PARAMS, f, indent=4)
 
-    # Création de l'optimiseur
     simulator = TradingSimulator(parallel=True)
+
     optimizer = ParamOptimizer(
         simulator=simulator,
         param_file=param_file,
@@ -601,14 +498,13 @@ def main():
         best_file=best_file
     )
 
-    # Lancement de l'optimisation
-    best_config = optimizer.optimize(
-        max_tests=3,        # nb de valeurs testées par paramètre
-        max_iterations=100  # limite dure sur le nombre d'itérations
+    best_cfg = optimizer.optimize(
+        max_tests=0,       # 0 = explore toute la plage
+        max_iterations=100
     )
 
     print("\nConfiguration optimale finale :")
-    for k, v in best_config.items():
+    for k, v in best_cfg.items():
         print(f"  - {k}: {v}")
 
 

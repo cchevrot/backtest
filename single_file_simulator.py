@@ -141,19 +141,20 @@ def main():
         return
     
     test_params = {
-        'take_profit_market_pnl': 0.015,
-        'min_escape_time': 120.0,
-        'trail_stop_market_pnl': 0.008,
-        'stop_echappee_threshold': 0.012,
-        'start_echappee_threshold': 0.010,
-        'min_market_pnl': 0.005,
-        'top_n_threshold': 10,
-        'trade_interval_minutes': 5.0,
-        'trade_value_eur': 1000.0,
-        'max_pnl_timeout_minutes': 60.0,
+        'min_market_pnl': 39,
+        'take_profit_market_pnl': 100,
+        'trail_stop_market_pnl': 41,
+        'trade_start_hour': "09:15",
+        'trade_cutoff_hour': "13:00",
+        'min_escape_time': 83.0,
         'max_trades_per_day': 3,
-        'trade_cutoff_hour': "14:00",
-        'trade_start_hour': "09:30"
+        'stop_echappee_threshold': 1.5,
+        'start_echappee_threshold': 2.0,
+        'top_n_threshold': 1,
+        'trade_value_eur': 100.0,
+        'trade_interval_minutes': 15000,
+        'max_pnl_timeout_minutes': 6000,
+
     }
     
     print(f"{Fore.GREEN}{Style.BRIGHT}=== Test SingleFileSimulator ==={Style.RESET_ALL}")
