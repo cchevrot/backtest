@@ -41,7 +41,7 @@ class Display:
 class TradingSimulator:
     def __init__(self, data_files=None, parallel=True):
         if data_files is None:
-            data_files = glob.glob('../data/prices_data/dataset3/**/*.lz4', recursive=True)
+            data_files = glob.glob('../../data/prices_data/dataset3/**/*.lz4', recursive=True)
         self.backend = MultiFileSimulator(data_files=data_files, parallel=parallel, verbose=False)
 
     def run(self, config):
@@ -237,8 +237,11 @@ class ParamOptimizer:
 
                 if not valid:
                     continue
-
+                print("1================")
+                print("2Configuration à évaleuer : ", cfg)
+                print("3================")
                 pnl = self.evaluate(cfg)
+                print("4================")
 
                 if pnl > best_pnl:
                     best_cfg = cfg.copy()

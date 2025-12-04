@@ -9,7 +9,7 @@
     },
     "take_profit_market_pnl": {
         "initial_value": 118.0,
-        "min_value": 100.0,
+        "min_value": 50.0,
         "max_value": 200.0,
         "step": 1.0,
         "priority": 2,
@@ -42,15 +42,15 @@
     "min_escape_time": {
         "initial_value": 61.0,
         "min_value": 40.0,
-        "max_value": 80.0,
-        "step": 1,
+        "max_value": 500.0,
+        "step": 10,
         "priority": 2,
         "enabled": false
     },
     "max_trades_per_day": {
-        "initial_value": 3,
+        "initial_value": 1,
         "min_value": 1,
-        "max_value": 3,
+        "max_value": 9,
         "step": 1,
         "priority": 7,
         "enabled": true

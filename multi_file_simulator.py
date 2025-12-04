@@ -264,7 +264,7 @@ def main():
     import glob
     
     #data_files = glob.glob('../data/prices_data/**/*.lz4', recursive=True)
-    data_files = glob.glob('../data/prices_data/dataset2/**/*.lz4', recursive=True)
+    data_files = glob.glob('../../data/prices_data/dataset2/**/*.lz4', recursive=True)
     
     if not data_files:
         print(f"{Fore.RED}Aucun fichier de données trouvé dans ../data")
