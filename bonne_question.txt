@@ -1,5 +1,0 @@
-merci de faire un diagramme de contexte sobre pour algo_echappe.py
-très bien mais il manque  le type des entrées sorties : fichier, classe, paramètres, ...
-
-génerer un diagramme où l'on voit tous les fichiers appelant la classe sorted_pnl_table
-

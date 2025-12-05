@@ -1,6 +1,0 @@
-models:
-  - name: "Mistral Large"
-    provider: mistral
-    model: "mistral-large-2411"
-    apiKey: "0Tml5YK1H2vnKGOm1uoDhdFakZqEoptc"
-    apiBase: "https://api.continue.dev/model-proxy/v1/"
