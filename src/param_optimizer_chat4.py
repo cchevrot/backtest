@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Param Optimizer — Version Spherical Distance Search (NO F-STRINGS)
-Totally safe version: no f-strings, no multiline strings, no syntax ambiguity.
+Param Optimizer — Version Spherical Distance Search (nb_trades + roi)
 """
 
 import json
@@ -15,8 +14,9 @@ from itertools import product
 from datetime import datetime, timedelta
 from multi_file_simulator import MultiFileSimulator
 
+
 # ================================================================
-# DISPLAY (SAFE, NO F-STRINGS)
+# DISPLAY
 # ================================================================
 class Display:
     @staticmethod
@@ -35,8 +35,9 @@ class Display:
     def title(t):
         print("\n==== " + str(t) + " ====")
 
+
 # ================================================================
-# SIMULATOR
+# SIMULATOR — RETURN pnl, nb_trades, roi
 # ================================================================
 class TradingSimulator:
     def __init__(self, data_files=None, parallel=True):
@@ -46,20 +47,18 @@ class TradingSimulator:
 
     def run(self, config):
         result = self.backend.run_all_files(config)
-        return result["total_pnl"]
+        return result["total_pnl"], result["total_trades"], result["roi"]
+
 
 # ================================================================
-# CACHE
+# RESULT CACHE (pnl + trades + roi)
 # ================================================================
 def _parse_value(v):
-    try:
-        return int(v)
-    except:
-        pass
-    try:
-        return float(v)
-    except:
-        return v
+    try: return int(v)
+    except: pass
+    try: return float(v)
+    except: return v
+
 
 class ResultCache:
     def __init__(self, filename):
@@ -72,39 +71,51 @@ class ResultCache:
         with open(self.filename) as f:
             rd = csv.DictReader(f)
             for row in rd:
+
                 pnl = float(row.pop("pnl"))
+                nb_trades = int(float(row.pop("nb_trades")))
+                roi = float(row.pop("roi"))
+
                 cfg = {}
                 for k, v in row.items():
                     cfg[k] = _parse_value(v)
+
                 key = self.key(cfg)
-                self.data[key] = pnl
+                self.data[key] = (pnl, nb_trades, roi)
+
         Display.info("Cache chargé : " + str(len(self.data)) + " entrées")
 
     def key(self, cfg):
-        print("---------------------")
-        print(cfg)
-        print("-----------------------")
         return json.dumps(cfg, sort_keys=True)
 
     def get(self, cfg):
         key = self.key(cfg)
         return self.data.get(key)
 
-    def store(self, cfg, pnl):
+    def store(self, cfg, pnl, nb_trades, roi):
         key = self.key(cfg)
-        self.data[key] = pnl
+        self.data[key] = (pnl, nb_trades, roi)
+
         write_header = not os.path.exists(self.filename)
+
         with open(self.filename, "a", newline="") as f:
-            fieldnames = ["pnl"] + list(cfg.keys())
+            fieldnames = ["pnl", "nb_trades", "roi"] + list(cfg.keys())
             writer = csv.DictWriter(f, fieldnames=fieldnames)
+
             if write_header:
                 writer.writeheader()
-            row = {"pnl": pnl}
+
+            row = {
+                "pnl": pnl,
+                "nb_trades": nb_trades,
+                "roi": roi
+            }
             row.update(cfg)
             writer.writerow(row)
 
+
 # ================================================================
-# PARAMETER
+# PARAMETER & PARAMETER SPACE (inchangé)
 # ================================================================
 class Parameter:
     def __init__(self, name, meta):
@@ -119,6 +130,7 @@ class Parameter:
         return isinstance(self.initial, str) and ":" in self.initial
 
     def apply_offset(self, center, units):
+
         if self.is_time():
             to_dt = lambda s: datetime.strptime(s, "%H:%M")
             ct = to_dt(center)
@@ -129,15 +141,12 @@ class Parameter:
                 return None
             return new.strftime("%H:%M")
 
-        else:
-            value = center + units * self.step
-            if value < self.min or value > self.max:
-                return None
-            return value
+        value = center + units * self.step
+        if value < self.min or value > self.max:
+            return None
+        return value
 
-# ================================================================
-# PARAMETER SPACE
-# ================================================================
+
 class ParameterSpace:
     def __init__(self, filename):
         self.filename = filename
@@ -155,8 +164,9 @@ class ParameterSpace:
     def initial_config(self):
         return {k: p.initial for k, p in self.params.items()}
 
+
 # ================================================================
-# BEST
+# BEST CONFIG
 # ================================================================
 class BestConfig:
     def __init__(self, filename):
@@ -165,6 +175,7 @@ class BestConfig:
         self.pnl = float('-inf')
 
     def load(self, space):
+
         if not os.path.exists(self.filename):
             self.config = space.initial_config()
             return self.config
@@ -184,8 +195,9 @@ class BestConfig:
                 json.dump({"pnl": pnl, "config": cfg}, f, indent=4)
             Display.success("Nouveau record global : " + str(pnl))
 
+
 # ================================================================
-# OPTIMIZER — SPHERICAL SEARCH (NO F-STRINGS)
+# OPTIMIZER — SPHERICAL SEARCH
 # ================================================================
 class ParamOptimizer:
     def __init__(self, sim, param_file, cache_file, best_file):
@@ -196,19 +208,19 @@ class ParamOptimizer:
 
     def evaluate(self, cfg):
         cached = self.cache.get(cfg)
-        if cached is not None:
-            return cached
 
-        pnl = self.sim.run(cfg)
-        self.cache.store(cfg, pnl)
+        if cached is not None:
+            pnl, nb_trades, roi = cached
+            return pnl
+
+        pnl, nb_trades, roi = self.sim.run(cfg)
+        self.cache.store(cfg, pnl, nb_trades, roi)
         return pnl
 
     def generate_spherical_offsets(self, params, R):
         n = len(params)
         for vector in product(range(-R, R+1), repeat=n):
-            if all(v == 0 for v in vector):
-                continue
-
+            if all(v == 0 for v in vector): continue
             dist = math.sqrt(sum(v*v for v in vector))
             if abs(dist - R) < 1e-9 or int(dist) == R:
                 yield vector
@@ -237,11 +249,8 @@ class ParamOptimizer:
 
                 if not valid:
                     continue
-                print("1================")
-                print("2Configuration à évaleuer : ", cfg)
-                print("3================")
+
                 pnl = self.evaluate(cfg)
-                print("4================")
 
                 if pnl > best_pnl:
                     best_cfg = cfg.copy()
@@ -254,6 +263,7 @@ class ParamOptimizer:
 
             R += 1
 
+
 # ================================================================
 # MAIN
 # ================================================================
@@ -265,8 +275,7 @@ def main():
     simulator = TradingSimulator(parallel=True)
     opt = ParamOptimizer(simulator, param_file, cache_file, best_file)
 
-    opt.spherical_search()   # boucle infinie, arrêt avec CTRL-C
-
+    opt.spherical_search()
 
 if __name__ == "__main__":
     main()
