@@ -102,9 +102,11 @@ class ResultCache:
         self.data[key] = (pnl, nb_trades, roi, win_rate, drawdown)
 
         write_header = not os.path.exists(self.filename)
+        
+        drawdown_pct = (drawdown / pnl * 100) if pnl != 0 else 0.0
 
         with open(self.filename, "a", newline="") as f:
-            fieldnames = ["pnl", "nb_trades", "roi", "win_rate", "drawdown"] + list(cfg.keys())
+            fieldnames = ["pnl", "nb_trades", "roi", "win_rate", "drawdown", "drawdown_pct"] + list(cfg.keys())
             writer = csv.DictWriter(f, fieldnames=fieldnames)
 
             if write_header:
@@ -115,7 +117,8 @@ class ResultCache:
                 "nb_trades": nb_trades,
                 "roi": roi,
                 "win_rate": win_rate,
-                "drawdown": drawdown
+                "drawdown": drawdown,
+                "drawdown_pct": drawdown_pct
             }
             row.update(cfg)
 
