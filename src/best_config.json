@@ -1,5 +1,5 @@
 {
-    "pnl": 835.7054867707193,
+    "pnl": 864.4434141889215,
     "config": {
         "min_market_pnl": 42.0,
         "take_profit_market_pnl": 118.0,
@@ -13,6 +13,7 @@
         "top_n_threshold": 1,
         "trade_value_eur": 100.0,
         "trade_interval_minutes": 150000,
-        "max_pnl_timeout_minutes": 6000.0
+        "max_pnl_timeout_minutes": 6000.0,
+        "max_trade_duration_minutes": 274
     }
 }

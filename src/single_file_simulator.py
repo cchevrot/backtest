@@ -87,6 +87,7 @@ class SingleFileSimulator:
             max_trades_per_day=params.get('max_trades_per_day', 3),
             trade_cutoff_hour=params.get('trade_cutoff_hour', "14:00"),
             trade_start_hour=params.get('trade_start_hour', "09:30"),
+            max_trade_duration_minutes=params.get('max_trade_duration_minutes', 60),
             verbose=verbose
         )
         timestamp = 0.0

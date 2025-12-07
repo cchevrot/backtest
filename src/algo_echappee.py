@@ -72,7 +72,8 @@ class AlgoEchappee:
                  start_echappee_threshold=0.78, min_market_pnl=15.0,
                  top_n_threshold=5, trade_interval_minutes=30, trade_value_eur=100.0,
                  max_pnl_timeout_minutes=60.0, max_trades_per_day=3,
-                 trade_cutoff_hour="14:00", trade_start_hour="09:30", verbose=True):
+                 trade_cutoff_hour="14:00", trade_start_hour="09:30",
+                 max_trade_duration_minutes=60, verbose=True):
         self.portfolio = Portfolio()
         self.traded_tickers = set()
         self.take_profit_market_pnl = take_profit_market_pnl
@@ -88,6 +89,7 @@ class AlgoEchappee:
         self.max_trades_per_day = max_trades_per_day
         self.trade_cutoff_hour = trade_cutoff_hour
         self.trade_start_hour = trade_start_hour
+        self.max_trade_duration_minutes = max_trade_duration_minutes
         self.verbose = verbose
         self.escape_start_times = {}
         self.top_n_start_times = {}
@@ -218,6 +220,16 @@ class AlgoEchappee:
                 self.portfolio.close_position(ticker, last_price, timestamp, table)
                 print(f"Closed position on {ticker} at {fmt(timestamp)} due to max PNL timeout (no new max PNL for {self.max_pnl_timeout_minutes} minutes)")
                 continue
+
+            # Vérifier si la durée max du trade est dépassée
+            max_duration_seconds = self.max_trade_duration_minutes * 60
+            for trade in self.portfolio.trades:
+                if trade["ticker"] == ticker and trade["status"] == "open":
+                    if (timestamp - trade["entry_time"]) >= max_duration_seconds:
+                        self.portfolio.close_position(ticker, last_price, timestamp, table)
+                        if self.verbose:
+                            print(f"Closed position on {ticker} at {fmt(timestamp)} due to max duration ({self.max_trade_duration_minutes} min)")
+                        break
 
         # Close Trade: Calculate echappees and check stop echappee
         top_15 = table.get_top_n(15)

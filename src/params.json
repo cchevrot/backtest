@@ -48,12 +48,12 @@
         "enabled": false
     },
     "max_trades_per_day": {
-        "initial_value": 1,
+        "initial_value": 3,
         "min_value": 1,
         "max_value": 9,
         "step": 1,
         "priority": 7,
-        "enabled": true
+        "enabled": false
     },
     "stop_echappee_threshold": {
         "initial_value": 1.2,
@@ -102,5 +102,13 @@
         "step": 1000.0,
         "priority": 13,
         "enabled": false
+    },
+    "max_trade_duration_minutes": {
+        "initial_value": 290,
+        "min_value": 30,
+        "max_value": 600,
+        "step": 1,
+        "priority": 14,
+        "enabled": true
     }
 }

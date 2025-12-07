@@ -192,6 +192,12 @@ class BestConfig:
 
         self.config = d["config"]
         self.pnl = d["pnl"]
+        
+        # Compléter avec les nouveaux paramètres manquants
+        for k, v in space.initial_config().items():
+            if k not in self.config:
+                self.config[k] = v
+        
         return self.config.copy()
 
     def update(self, cfg, pnl):
