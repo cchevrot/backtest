@@ -104,7 +104,7 @@
         "enabled": false
     },
     "max_trade_duration_minutes": {
-        "initial_value": 290,
+        "initial_value": 274,
         "min_value": 30,
         "max_value": 600,
         "step": 1,
