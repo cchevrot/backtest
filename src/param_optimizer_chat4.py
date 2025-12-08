@@ -138,9 +138,21 @@ class Parameter:
         self.enabled = meta.get("enabled", True)
 
     def is_time(self):
-        return isinstance(self.initial, str) and ":" in self.initial
+        return isinstance(self.min, str) and ":" in self.min
+
+    def is_nullable(self):
+        return self.initial is None
 
     def apply_offset(self, center, units):
+        if self.is_nullable() and center is None:
+            if units == 0:
+                return None
+            to_dt = lambda s: datetime.strptime(s, "%H:%M")
+            new = to_dt(self.min) + timedelta(minutes=int(units - 1) * int(self.step))
+            if new > to_dt(self.max):
+                return None
+            return new.strftime("%H:%M")
+
         if self.is_time():
             to_dt = lambda s: datetime.strptime(s, "%H:%M")
             ct = to_dt(center)
@@ -174,50 +186,14 @@ class ParameterSpace:
 
 
 # ================================================================
-# BEST CONFIG
-# ================================================================
-class BestConfig:
-    def __init__(self, filename):
-        self.filename = filename
-        self.config = None
-        self.pnl = float('-inf')
-
-    def load(self, space):
-        if not os.path.exists(self.filename):
-            self.config = space.initial_config()
-            return self.config
-
-        with open(self.filename) as f:
-            d = json.load(f)
-
-        self.config = d["config"]
-        self.pnl = d["pnl"]
-        
-        # Compléter avec les nouveaux paramètres manquants
-        for k, v in space.initial_config().items():
-            if k not in self.config:
-                self.config[k] = v
-        
-        return self.config.copy()
-
-    def update(self, cfg, pnl):
-        if pnl > self.pnl:
-            self.pnl = pnl
-            self.config = cfg.copy()
-            with open(self.filename, "w") as f:
-                json.dump({"pnl": pnl, "config": cfg}, f, indent=4)
-            Display.success("Nouveau record global : " + str(pnl))
-
-
-# ================================================================
 # OPTIMIZER
 # ================================================================
 class ParamOptimizer:
-    def __init__(self, sim, param_file, cache_file, best_file):
+    def __init__(self, sim, param_file, cache_file):
         self.sim = sim
         self.space = ParameterSpace(param_file)
         self.cache = ResultCache(cache_file)
-        self.best = BestConfig(best_file)
+        self.best_pnl = float('-inf')
 
     def evaluate(self, cfg):
 
@@ -247,7 +223,7 @@ class ParamOptimizer:
         self.space.load()
         params = self.space.active()
 
-        best_cfg = self.best.load(self.space)
+        best_cfg = self.space.initial_config()
         best_pnl = self.evaluate(best_cfg)
 
         R = 1
@@ -276,7 +252,7 @@ class ParamOptimizer:
                     best_cfg = cfg.copy()
                     best_pnl = pnl
                     improved = True
-                    self.best.update(best_cfg, best_pnl)
+                    Display.success(f"Nouveau record : {best_pnl}")
 
             if not improved:
                 Display.warn("Aucune amélioration → extension du rayon")
@@ -290,10 +266,9 @@ class ParamOptimizer:
 def main():
     param_file = "params.json"
     cache_file = "results.csv"
-    best_file = "best_config.json"
 
     simulator = TradingSimulator(parallel=True)
-    opt = ParamOptimizer(simulator, param_file, cache_file, best_file)
+    opt = ParamOptimizer(simulator, param_file, cache_file)
     opt.spherical_search()
 
 

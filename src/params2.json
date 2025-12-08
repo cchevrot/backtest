@@ -1,0 +1,122 @@
+{
+    "min_market_pnl": {
+        "initial_value":10.0,
+        "min_value": 5.0,
+        "max_value": 20.0,
+        "step": 1.0,
+        "priority": 1,
+        "enabled": true
+    },
+    "take_profit_market_pnl": {
+        "initial_value": 45.0,
+        "min_value": 30.0,
+        "max_value": 60.0,
+        "step": 1.0,
+        "priority": 2,
+        "enabled": true
+    },
+    "trail_stop_market_pnl": {
+        "initial_value": 25,
+        "min_value": 15,
+        "max_value": 35,
+        "step": 1,
+        "priority": 3,
+        "enabled": true
+    },
+    "trade_start_hour": {
+        "initial_value": "14:00",
+        "min_value": "14:00",
+        "max_value": "15:30",
+        "step": 15,
+        "priority": 1,
+        "enabled": false
+    },
+    "trade_cutoff_hour": {
+        "initial_value": "18:30",
+        "min_value": "18:00",
+        "max_value": "19:00",
+        "step": 10,
+        "priority": 5,
+        "enabled": false
+    },
+    "min_escape_time": {
+        "initial_value": 61.0,
+        "min_value": 40.0,
+        "max_value": 500.0,
+        "step": 10,
+        "priority": 2,
+        "enabled": false
+    },
+    "max_trades_per_day": {
+        "initial_value": 3,
+        "min_value": 1,
+        "max_value": 9,
+        "step": 1,
+        "priority": 7,
+        "enabled": true
+    },
+    "stop_echappee_threshold": {
+        "initial_value": 1.2,
+        "min_value": 1,
+        "max_value": 3,
+        "step": 0.1,
+        "priority": 8,
+        "enabled": false
+    },
+    "start_echappee_threshold": {
+        "initial_value": 1.9,
+        "min_value": 1.5,
+        "max_value": 2.5,
+        "step": 0.1,
+        "priority": 9,
+        "enabled": false
+    },
+    "top_n_threshold": {
+        "initial_value": 1,
+        "min_value": 1,
+        "max_value": 5,
+        "step": 1,
+        "priority": 10,
+        "enabled": false
+    },
+    "trade_value_eur": {
+        "initial_value": 100.0,
+        "min_value": 50.0,
+        "max_value": 200.0,
+        "step": 25.0,
+        "priority": 11,
+        "enabled": false
+    },
+    "trade_interval_minutes": {
+        "initial_value": 150000,
+        "min_value": 100000,
+        "max_value": 200000,
+        "step": 25000,
+        "priority": 12,
+        "enabled": false
+    },
+    "max_pnl_timeout_minutes": {
+        "initial_value": 6000.0,
+        "min_value": 4000.0,
+        "max_value": 8000.0,
+        "step": 1000.0,
+        "priority": 13,
+        "enabled": false
+    },
+    "max_trade_duration_minutes": {
+        "initial_value": 274,
+        "min_value": 30,
+        "max_value": 600,
+        "step": 1,
+        "priority": 14,
+        "enabled": false
+    },
+    "reinit_hour": {
+        "initial_value": "14:00",
+        "min_value": "12:30",
+        "max_value": "12:30",
+        "step": 10,
+        "priority": 15,
+        "enabled": false
+    }
+}

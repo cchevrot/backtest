@@ -35,6 +35,11 @@ class SortedPnlTable:
             return self.ticker_map[ticker].last_price
         return None
 
+    def reset(self):
+        self.ticker_map = {}
+        self.sorted_tickers = []
+        self.updates_since_last_sort = 0
+
     class TickerEntry:
         def __init__(self, first_price, first_time):
             self.first_price = first_price

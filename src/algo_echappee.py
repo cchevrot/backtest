@@ -73,7 +73,7 @@ class AlgoEchappee:
                  top_n_threshold=5, trade_interval_minutes=30, trade_value_eur=100.0,
                  max_pnl_timeout_minutes=60.0, max_trades_per_day=3,
                  trade_cutoff_hour="14:00", trade_start_hour="09:30",
-                 max_trade_duration_minutes=60, verbose=True):
+                 max_trade_duration_minutes=60, reinit_hour=None, verbose=True):
         self.portfolio = Portfolio()
         self.traded_tickers = set()
         self.take_profit_market_pnl = take_profit_market_pnl
@@ -90,11 +90,13 @@ class AlgoEchappee:
         self.trade_cutoff_hour = trade_cutoff_hour
         self.trade_start_hour = trade_start_hour
         self.max_trade_duration_minutes = max_trade_duration_minutes
+        self.reinit_hour = reinit_hour
         self.verbose = verbose
         self.escape_start_times = {}
         self.top_n_start_times = {}
         self.last_trade_time = None
         self.trades_today = {}  # Suivi des trades par jour (format: 'YYYY-MM-DD': count)
+        self._reinit_done_today = {}  # Suivi des réinitialisations par jour
 
     def _get_date(self, timestamp):
         """Retourne la date au format 'YYYY-MM-DD' à partir d'un timestamp."""
@@ -182,8 +184,33 @@ class AlgoEchappee:
 
         return echappees
 
+    def _check_reinit(self, table, timestamp):
+        """Vérifie si une réinitialisation est nécessaire à l'heure définie."""
+        if self.reinit_hour is None:
+            return
+        
+        current_date = self._get_date(timestamp)
+        if current_date in self._reinit_done_today:
+            return
+        
+        current_hour = self._get_hour(timestamp)
+        reinit_hour_decimal = self._parse_time(self.reinit_hour)
+        
+        if current_hour >= reinit_hour_decimal:
+            self.portfolio.close_all(table, timestamp)
+            table.reset()
+            self.traded_tickers.clear()
+            self.escape_start_times.clear()
+            self.top_n_start_times.clear()
+            self.trades_today[current_date] = 0
+            self._reinit_done_today[current_date] = True
+            if self.verbose:
+                print(f"Reinit at {fmt(timestamp)}: closed all trades, reset table")
+
     def main(self, table, timestamp):
         """Exécute la stratégie d'échappée."""
+        self._check_reinit(table, timestamp)
+        
         # Iterate over tickers with open positions using get_open_tickers
         for ticker in self.portfolio.get_open_tickers():
             last_price = table.get_last_price(ticker)
